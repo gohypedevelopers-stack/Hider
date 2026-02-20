@@ -1,0 +1,72 @@
+@import '../globals.css';
+
+.section {
+    padding: 88px 0;
+    background-color: #FFF;
+}
+
+.intro {
+    margin-bottom: 64px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.card {
+    background: #F8F8F8;
+    padding: 40px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card:hover {
+    background: #000;
+    color: #FFF;
+    transform: translateY(-5px);
+}
+
+.iconWrapper {
+    margin-bottom: 24px;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #FFF;
+    color: #000;
+    transition: background 0.3s;
+}
+
+.card:hover .iconWrapper {
+    background: #222;
+    color: #FFF;
+}
+
+.label {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

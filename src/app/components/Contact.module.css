@@ -1,0 +1,73 @@
+@import '../globals.css';
+
+.section {
+    padding: 88px 0;
+    background-color: #FFF;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 64px;
+}
+
+.infoItem {
+    margin-bottom: 32px;
+}
+
+.infoItem h4 {
+    font-family: var(--font-body);
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #888;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.infoItem p {
+    font-size: 16px;
+    color: #111;
+    font-weight: 500;
+}
+
+.mapContainer {
+    height: 480px;
+    background: #EEE;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 12px 24px;
+    border: 1px solid #111;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: #111;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background: #111;
+    color: #FFF;
+}
+
+@media (max-width: 900px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .mapContainer {
+        height: 320px;
+    }
+}

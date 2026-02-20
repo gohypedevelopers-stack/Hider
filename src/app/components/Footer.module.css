@@ -1,0 +1,70 @@
+@import '../globals.css';
+
+.footer {
+    padding: 64px 0 24px;
+    background-color: #000;
+    color: #FFF;
+    font-size: 14px;
+}
+
+.footerContainer {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 48px;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.footerLogo {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 20px;
+    filter: invert(1) brightness(1.2);
+}
+
+.tagline {
+    color: #888;
+    line-height: 1.6;
+    max-width: 320px;
+}
+
+.h4 {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #666;
+    letter-spacing: 1.5px;
+    margin-bottom: 24px;
+}
+
+.linkList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footerLink {
+    color: #DDD;
+    transition: color 0.3s;
+}
+
+.footerLink:hover {
+    color: #FFF;
+    text-decoration: underline;
+}
+
+.footerBottom {
+    text-align: center;
+    color: #444;
+    margin-top: 48px;
+    border-top: 1px solid #111;
+    padding-top: 24px;
+    font-size: 12px;
+}
+
+@media (max-width: 900px) {
+    .footerContainer {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
