@@ -43,7 +43,7 @@ export default function Footer() {
             </div>
 
             <div className={styles.footerBottom}>
-                <p>&copy; {new Date().getFullYear()} Hider Hotel. All rights reserved. | Manesa, Gurgaon</p>
+                <p>&copy; {new Date().getFullYear()} Hider Hotel. All rights reserved. | Manesar, Gurgaon</p>
             </div>
         </footer>
     );

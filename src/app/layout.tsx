@@ -16,7 +16,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Hider Hotel | Luxury & Comfort",
-  description: "Experience luxury and comfort in the heart of Mansehra.",
+  description: "Experience luxury and comfort in the heart of Manesar.",
 };
 
 export default function RootLayout({
