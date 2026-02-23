@@ -40,7 +40,9 @@
 }
 
 .imageContainer {
-    height: 250px;
+    /* 16:9 aspect ratio — consistent across all room cards */
+    aspect-ratio: 16 / 9;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -110,9 +112,5 @@
 @media (max-width: 600px) {
     .grid {
         grid-template-columns: 1fr;
-    }
-
-    .imageContainer {
-        height: 280px;
     }
 }

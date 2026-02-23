@@ -4,27 +4,28 @@ import { siteConfig } from '../config';
 import styles from './Rooms.module.css';
 
 export default function Rooms() {
+    // Explicit image mapping — only verified bedroom images used here
     const rooms = [
         {
             id: 1,
             name: "Standard Room",
             price: "INR 2,500 / Night",
             features: "Queen Bed • Free WiFi • Rain Shower",
-            image: siteConfig.images.rooms[0]
+            image: siteConfig.images.rooms.standard   // /1.jpeg – bedroom
         },
         {
             id: 2,
             name: "Deluxe Room",
             price: "INR 4,500 / Night",
             features: "King Bed • Balcony • Mini Bar",
-            image: siteConfig.images.rooms[1]
+            image: siteConfig.images.rooms.deluxe     // /2.jpeg – premium bedroom
         },
         {
             id: 3,
             name: "Family Suite",
             price: "INR 8,000 / Night",
             features: "2 Bedrooms • Lounge • Kitchenette",
-            image: siteConfig.images.rooms[2]
+            image: siteConfig.images.rooms.family     // /8.jpeg – suite bedroom (NOT bathroom)
         }
     ];
 
