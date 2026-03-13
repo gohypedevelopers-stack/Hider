@@ -71,7 +71,6 @@ export default async function RoomPage({ params }: PageProps) {
           {/* Room Experience */}
           <RoomExperience 
             title={room.title}
-            price={room.price}
             description={room.description}
           />
 
