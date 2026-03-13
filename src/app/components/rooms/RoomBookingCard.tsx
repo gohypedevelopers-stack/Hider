@@ -8,7 +8,7 @@ interface RoomBookingCardProps {
   guests: string;
 }
 
-export default function RoomBookingCard({ price }: RoomBookingCardProps) {
+export default function RoomBookingCard({ price, roomType, guests }: RoomBookingCardProps) {
   return (
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
@@ -29,7 +29,7 @@ export default function RoomBookingCard({ price }: RoomBookingCardProps) {
         <div className="space-y-4 mb-10">
           <div className="bg-[#F8F8F8] p-5 rounded-2xl flex items-center justify-between group cursor-pointer hover:bg-[#F2F2F2] transition-colors">
             <div className="flex flex-col gap-1">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-gray-400">Check-in</span>
+              <span className="text-[10px] font-bold uppercase tracking-wider text-gray-400">{roomType || "Room Type"}</span>
               <span className="text-sm font-semibold text-[#1A1A1A]">Select Date</span>
             </div>
             <Calendar size={18} className="text-[#E85D1A]" />
@@ -38,7 +38,7 @@ export default function RoomBookingCard({ price }: RoomBookingCardProps) {
           <div className="bg-[#F8F8F8] p-5 rounded-2xl flex items-center justify-between group cursor-pointer hover:bg-[#F2F2F2] transition-colors">
             <div className="flex flex-col gap-1">
               <span className="text-[10px] font-bold uppercase tracking-wider text-gray-400">Guests</span>
-              <span className="text-sm font-semibold text-[#1A1A1A]">2 Adults, 0 Children</span>
+              <span className="text-sm font-semibold text-[#1A1A1A]">{guests || "2 Adults, 0 Children"}</span>
             </div>
             <Users size={18} className="text-[#E85D1A]" />
           </div>

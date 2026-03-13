@@ -19,7 +19,7 @@ export default function Rooms() {
             id: 2,
             slug: "deluxe-room",
             name: "Deluxe Room",
-            price: "₹4,500 / night",
+            price: "₹3,500 / night",
             features: "King Bed • Balcony • Mini Bar",
             image: siteConfig.images.rooms.deluxe
         },
@@ -27,7 +27,7 @@ export default function Rooms() {
             id: 3,
             slug: "super-deluxe-room",
             name: "Super Deluxe Room",
-            price: "₹8,000 / night",
+            price: "₹4,500 / night",
             features: "2 Bedrooms • Double Suite • Grand View",
             image: siteConfig.images.rooms.family
         }
