@@ -1,6 +1,7 @@
 "use client";
 import { motion } from 'framer-motion';
 import { siteConfig } from '../config';
+import Link from 'next/link';
 import styles from './Rooms.module.css';
 
 export default function Rooms() {
@@ -8,24 +9,27 @@ export default function Rooms() {
     const rooms = [
         {
             id: 1,
+            slug: "standard-room",
             name: "Standard Room",
-            price: "INR 2,500 / Night",
-            features: "Queen Bed • Free WiFi • Rain Shower",
-            image: siteConfig.images.rooms.standard   // /1.jpeg – bedroom
+            price: "₹2,500 / night",
+            features: "Queen Bed • Garden View • Rain Shower",
+            image: siteConfig.images.rooms.standard
         },
         {
             id: 2,
+            slug: "deluxe-room",
             name: "Deluxe Room",
-            price: "INR 4,500 / Night",
+            price: "₹4,500 / night",
             features: "King Bed • Balcony • Mini Bar",
-            image: siteConfig.images.rooms.deluxe     // /2.jpeg – premium bedroom
+            image: siteConfig.images.rooms.deluxe
         },
         {
             id: 3,
-            name: "Family Suite",
-            price: "INR 8,000 / Night",
-            features: "2 Bedrooms • Lounge • Kitchenette",
-            image: siteConfig.images.rooms.family     // /8.jpeg – suite bedroom (NOT bathroom)
+            slug: "super-deluxe-room",
+            name: "Super Deluxe Room",
+            price: "₹8,000 / night",
+            features: "2 Bedrooms • Double Suite • Grand View",
+            image: siteConfig.images.rooms.family
         }
     ];
 
@@ -65,9 +69,9 @@ export default function Rooms() {
                                 <h3 className={styles.roomTitle}>{room.name}</h3>
                                 <p className={styles.desc}>{room.features}</p>
                                 <div className={styles.price}>{room.price}</div>
-                                <button onClick={handleEnquire} className={styles.btn}>
+                                <Link href={`/rooms/${room.slug}`} className={styles.btn}>
                                     VIEW DETAILS
-                                </button>
+                                </Link>
                             </div>
                         </motion.div>
                     ))}

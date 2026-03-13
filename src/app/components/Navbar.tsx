@@ -1,13 +1,9 @@
 "use client";
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, User } from 'lucide-react';
 import styles from './Navbar.module.css';
-
-// ============================================================
-// BRAND LOGO — SINGLE SOURCE OF TRUTH. DO NOT CHANGE.
-// ============================================================
-const LOGO_SRC = "/logo.png";
+import { BRAND_LOGO } from '../config';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -24,29 +20,24 @@ export default function Navbar() {
                 {/* ===== LOGO — Only /logo.png — plain <img>, no SVG, no component ===== */}
                 <a href="#home" className={styles.logoLink} onClick={(e) => { e.preventDefault(); scrollTo('home'); }}>
                     <img
-                        src={LOGO_SRC}
+                        src={BRAND_LOGO}
                         alt="Hider"
-                        style={{
-                            height: '60px',
-                            width: 'auto',
-                            display: 'block',
-                            objectFit: 'contain',
-                            filter: 'none',
-                            opacity: 1,
-                            mixBlendMode: 'normal',
-                            background: 'transparent',
-                        }}
+                        className={styles.logoImg}
                     />
                 </a>
 
                 {/* Desktop Menu */}
                 <div className={styles.menuDesktop}>
-                    <button onClick={() => scrollTo('home')} className={styles.link}>Home</button>
-                    <button onClick={() => scrollTo('rooms')} className={styles.link}>Rooms</button>
+                    <button onClick={() => scrollTo('home')} className={styles.link}>Rooms</button>
                     <button onClick={() => scrollTo('amenities')} className={styles.link}>Amenities</button>
-                    <button onClick={() => scrollTo('gallery')} className={styles.link}>Gallery</button>
+                    <button onClick={() => scrollTo('gallery')} className={styles.link}>Offers</button>
                     <button onClick={() => scrollTo('contact')} className={styles.link}>Contact</button>
                     <button onClick={() => scrollTo('booking')} className={styles.bookBtn}>Book Now</button>
+                    
+                    {/* User Icon Wrapper */}
+                    <div className={styles.userWrapper}>
+                        <User size={20} strokeWidth={2.5} />
+                    </div>
                 </div>
 
                 {/* Mobile Toggle */}
@@ -60,7 +51,7 @@ export default function Navbar() {
                         <button onClick={() => scrollTo('home')} className={styles.mobileLink}>Home</button>
                         <button onClick={() => scrollTo('rooms')} className={styles.mobileLink}>Rooms</button>
                         <button onClick={() => scrollTo('amenities')} className={styles.mobileLink}>Amenities</button>
-                        <button onClick={() => scrollTo('gallery')} className={styles.mobileLink}>Gallery</button>
+                        <button onClick={() => scrollTo('gallery')} className={styles.mobileLink}>Offers</button>
                         <button onClick={() => scrollTo('contact')} className={styles.mobileLink}>Contact</button>
                         <button onClick={() => scrollTo('booking')} className={styles.bookBtn}>Book Now</button>
                     </div>

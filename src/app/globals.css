@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap');
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   /* STRICT BRAND TOKENS - NO AUTO COLORS */
   --bg-dark: #000000;
@@ -10,7 +14,11 @@
   --text-light: #FFFFFF;
   --border-dark: #2A2A2A;
   --border-light: #E6E6E6;
-  --muted: #A8A8A8;
+  /* New Modern Premium Brand Colors */
+  --brand-orange: #E85D1A;
+  --brand-orange-hover: #D14D0D;
+  --bg-creamy: #FAFAFA;
+  --muted: #888888;
 
   /* Spacing */
   --container-width: 1200px;
@@ -34,35 +42,40 @@ html {
 
 body {
   font-family: var(--font-body);
-  background-color: var(--bg-light);
-  color: var(--text-dark);
+  background-color: var(--bg-creamy);
+  color: #1A1A1A;
   line-height: 1.6;
+  letter-spacing: -0.01em;
   overflow-x: hidden;
 }
 
 /* Typography Scale */
 h1 {
   font-family: var(--font-heading);
-  font-size: 52px;
-  line-height: 1.2;
+  font-size: 64px;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
 }
 
 h2 {
   font-family: var(--font-heading);
-  font-size: 32px;
-  line-height: 1.3;
-  margin-bottom: 16px;
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
 }
 
 h3,
 h4,
 h5 {
   font-family: var(--font-heading);
+  letter-spacing: 0.05em;
 }
 
 p {
-  font-size: 16px;
-  color: #555;
+  font-size: 17px;
+  color: #666;
+  line-height: 1.8;
 }
 
 a {

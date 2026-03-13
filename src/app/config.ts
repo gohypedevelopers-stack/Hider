@@ -1,5 +1,4 @@
-// BRAND LOGO - Single source of truth. Use ONLY this path everywhere.
-export const BRAND_LOGO = "/logo.png";
+export const BRAND_LOGO = "/lobo.png";
 
 export const siteConfig = {
     hotelName: "Hider",

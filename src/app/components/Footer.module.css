@@ -1,70 +1,79 @@
-@import '../globals.css';
-
 .footer {
-    padding: 64px 0 24px;
-    background-color: #000;
-    color: #FFF;
+    padding: 80px 0 32px;
+    background-color: #FAFAFA;
+    color: #1A1A1A;
     font-size: 14px;
+    border-top: 1px solid #EEE;
 }
 
 .footerContainer {
     display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr;
-    gap: 48px;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 60px;
     max-width: var(--container-width);
     margin: 0 auto;
+    padding: 0 32px;
 }
 
 .footerLogo {
-    height: 80px;
+    height: 55px;
     width: auto;
     object-fit: contain;
-    margin-bottom: 20px;
-    filter: invert(1) brightness(1.2);
+    margin-bottom: 24px;
 }
 
 .tagline {
-    color: #888;
-    line-height: 1.6;
-    max-width: 320px;
+    color: #666;
+    line-height: 1.8;
+    max-width: 380px;
+    font-size: 15px;
 }
 
 .h4 {
-    font-size: 13px;
+    font-size: 12px;
     text-transform: uppercase;
-    color: #666;
-    letter-spacing: 1.5px;
-    margin-bottom: 24px;
+    color: #1A1A1A;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 28px;
 }
 
 .linkList {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
 }
 
 .footerLink {
-    color: #DDD;
-    transition: color 0.3s;
+    color: #555;
+    transition: all 0.3s;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .footerLink:hover {
-    color: #FFF;
-    text-decoration: underline;
+    color: #E85D1A;
 }
 
 .footerBottom {
     text-align: center;
-    color: #444;
-    margin-top: 48px;
-    border-top: 1px solid #111;
-    padding-top: 24px;
-    font-size: 12px;
+    color: #999;
+    margin-top: 64px;
+    border-top: 1px solid #EEE;
+    padding-top: 32px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
 }
 
 @media (max-width: 900px) {
     .footerContainer {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 48px;
+        padding: 0 24px;
     }
 }
