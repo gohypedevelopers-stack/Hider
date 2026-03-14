@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Poppins } from "next/font/google";
+import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-heading"
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-playfair"
 });
 
-const poppins = Poppins({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-body"
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-inter"
 });
 
 export const metadata: Metadata = {
-  title: "Hider Hotel | Luxury & Comfort",
-  description: "Experience luxury and comfort in the heart of Manesar.",
+  title: "Hotel Hider | Luxury & Comfort in Mansa",
+  description: "Experience luxury and comfort in the heart of Mansa, Gujarat.",
 };
 
 export default function RootLayout({
@@ -25,8 +25,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${playfair.variable} ${poppins.variable}`} suppressHydrationWarning={true}>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();`,
+          }}
+        />
+      </head>
+      <body className={`${playfair.variable} ${inter.variable} font-sans`} suppressHydrationWarning={true}>
         {children}
       </body>
     </html>

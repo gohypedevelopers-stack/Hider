@@ -11,24 +11,18 @@ export default function Contact() {
 
                 <div className={styles.wrapper}>
                     {/* Info Side */}
-                    <div>
-                        <div className="mb-14">
-                            <h2>Visit Hider Hotel</h2>
-                            <p>Located in the heart of Manesar, Gurgaon. Easily accessible from Delhi-Jaipur Expressway.</p>
-                        </div>
-
+                    <div className={styles.intro}>
+                        <span className={styles.eyebrow}>Location</span>
+                        <h2>Connectivity</h2>
+                        
                         <div className={styles.infoItem}>
-                            <h4>Address</h4>
+                            <h4>Physical Address</h4>
                             <p>{address}</p>
                         </div>
 
                         <div className={styles.infoItem}>
-                            <h4>Phone</h4>
+                            <h4>Reservations</h4>
                             <p><a href={`tel:${phone}`}>{displayPhone}</a></p>
-                        </div>
-
-                        <div className={styles.infoItem}>
-                            <h4>Email</h4>
                             <p><a href={`mailto:${email}`}>{email}</a></p>
                         </div>
 
@@ -37,11 +31,11 @@ export default function Contact() {
                             target="_blank"
                             className={styles.btn}
                         >
-                            Open in Google Maps
+                            Get Directions
                         </a>
                     </div>
 
-                    {/* Map Side with specific Manesar Gurgaon Query */}
+                    {/* Map Side */}
                     <div className={styles.mapContainer}>
                         <iframe
                             src={`https://www.google.com/maps?q=${encodeURIComponent(mapQuery)}&output=embed`}

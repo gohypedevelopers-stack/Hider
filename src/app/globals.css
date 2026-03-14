@@ -1,40 +1,85 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap');
-
 @import "tailwindcss";
 
 :root {
-  /* BRAND TOKENS */
-  --brand-orange: #E85D1A;
-  --brand-orange-hover: #D14D0D;
-  
-  /* LIGHT THEME (Default) */
-  --app-bg: #FAFAFA;
-  --app-bg-accent: #FFFFFF;
-  --app-text: #1A1A1A;
+  /* ULTRA-LUXURY BRAND TOKENS */
+  --brand-gold: #C8A96A; /* Metallic Gold */
+  --brand-gold-soft: #D4BD8A;
+  --brand-gold-hover: #AB8E55;
+  --brand-charcoal: #111111;
+  --brand-beige: #F5F3EF; /* Soft Resort Beige */
+  --brand-cream: #FAF9F6;
+  --brand-sage: #E7ECE8; /* New Luxury Sage Green */
+  --brand-forest: #2D3E3A; /* New Deep Forest Green */
+
+  /* THEME TOKENS (Light/Luxury Minimal) */
+  --app-bg: #FFFFFF;
+  --app-bg-accent: #F5F3EF;
+  --app-text: #111111;
   --app-text-muted: #666666;
-  --app-border: rgba(0, 0, 0, 0.05);
-  --nav-bg: rgba(255, 255, 255, 0.8);
-  --nav-text: #1A1A1A;
+  --app-border: rgba(17, 17, 17, 0.08);
+  --nav-bg: rgba(255, 255, 255, 0.95);
+  --nav-text: #111111;
+  --card-bg: #FFFFFF;
+  --card-shadow: 0 20px 60px rgba(0, 0, 0, 0.05);
+  --logo-filter: brightness(0) invert(1); /* Forces it to be white at the top */
+  --logo-filter-scrolled: brightness(0); /* Forces it to be dark when scrolled */
+  --logo-filter-footer: brightness(0); /* Forces dark logo in light footer */
+
+  /* GLASS TOKENS */
+  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-blur: blur(20px);
 
   /* Spacing */
-  --container-width: 1200px;
-  --section-padding: 88px;
-  --section-padding-mobile: 56px;
+  --container-width: 1520px;
+  --app-container-px: 64px;
+  --section-padding: 160px;
+  --section-padding-mobile: 100px;
 
   /* Typography */
-  --font-heading: 'Playfair Display', serif;
-  --font-body: 'Poppins', sans-serif;
+  --font-heading: var(--font-playfair), 'Playfair Display', serif;
+  --font-body: var(--font-inter), 'Inter', sans-serif;
 }
 
 [data-theme='dark'] {
-  --app-bg: #0A0A0A;
+  --app-bg: #0D0D0D;
   --app-bg-accent: #111111;
   --app-text: #FFFFFF;
   --app-text-muted: #A0A0A0;
   --app-border: rgba(255, 255, 255, 0.1);
-  --nav-bg: rgba(0, 0, 0, 0.8);
-  --nav-text: #FFFFFF;
+  --section-bg: #0D0D0D;
+  --section-bg-alt: #111111;
+  --border-card: rgba(255, 255, 255, 0.08);
+  --card-bg-alt: #1A1A1A;
+  --nav-bg: rgba(13, 13, 13, 0.95);
+  --card-bg: #151515;
+  --card-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  --logo-filter: brightness(0) invert(1); /* Forces white at the top */
+  --logo-filter-scrolled: brightness(0) invert(1); /* Stays white when scrolled in dark mode */
+  --logo-filter-footer: brightness(0) invert(1); /* Stays white in dark footer */
+  
+  --glass-bg: rgba(17, 17, 17, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.05);
 }
+
+/* Luxury Texture Overlay */
+.luxury-texture {
+  position: relative;
+}
+
+.luxury-texture::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4v-4H4v4H0v2h4v4h2v-4h4v-2H6zm30 0v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+[data-theme='dark'] .luxury-texture::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4v-4H4v4H0v2h4v4h2v-4h4v-2H6zm30 0v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
 
 * {
   box-sizing: border-box;
@@ -46,43 +91,72 @@ html {
   scroll-behavior: smooth;
 }
 
+::selection {
+  background-color: var(--brand-gold);
+  color: #FFFFFF;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--app-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--app-border);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-gold);
+}
+
 body {
   font-family: var(--font-body);
   background-color: var(--app-bg);
   color: var(--app-text);
-  line-height: 1.6;
+  line-height: 1.8;
   letter-spacing: -0.01em;
   overflow-x: hidden;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Typography Scale */
+/* Typography Hierarchy */
 h1 {
   font-family: var(--font-heading);
-  font-size: 64px;
-  line-height: 1.1;
-  letter-spacing: -0.01em;
+  font-size: clamp(56px, 10vw, 110px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.02em;
 }
 
 h2 {
   font-family: var(--font-heading);
-  font-size: 42px;
-  line-height: 1.2;
-  margin-bottom: 24px;
+  font-size: clamp(38px, 6vw, 64px);
+  font-weight: 500;
+  line-height: 1.1;
   letter-spacing: -0.01em;
 }
 
-h3,
-h4,
-h5 {
+h3 {
   font-family: var(--font-heading);
-  letter-spacing: 0.05em;
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 500;
+}
+
+h4, h5 {
+  font-family: var(--font-heading);
+  font-weight: 500;
 }
 
 p {
   font-size: 17px;
   color: var(--app-text-muted);
-  line-height: 1.8;
+  font-weight: 300;
 }
 
 a {
@@ -107,12 +181,38 @@ ul {
   list-style: none;
 }
 
-/* Global Container */
-.container {
+/* Luxury Components */
+.eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: var(--brand-gold);
+  margin-bottom: 24px;
+}
+
+.luxury-line {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to top, var(--brand-gold), transparent);
+  margin: 0 auto 40px;
+}
+
+html, body {
+  overflow-x: hidden !important;
   width: 100%;
-  max-width: var(--container-width);
-  margin: 0 auto;
-  padding: 0 24px;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Global Container */
+.hider-main-container {
+  width: 100% !important;
+  max-width: var(--container-width) !important;
+  margin: 0 auto !important;
+  padding: 0 var(--app-container-px) !important;
+  position: relative;
 }
 
 /* Common Section Wrapper */
@@ -122,53 +222,132 @@ ul {
 
 .intro {
   text-align: center;
-  max-width: 700px;
-  margin: 0 auto 64px auto;
+  max-width: 800px;
+  margin: 0 auto 100px;
 }
 
-.intro p {
-  font-size: 18px;
-  color: var(--app-text-muted);
-}
-
-/* Strict Logo Rules — NO color manipulation under any conditions */
+/* ==============================
+   LOGO — base rules only
+   Theme-aware filters are handled in:
+   - Navbar.tsx (inline style via theme state)
+   - Footer.module.css (:global() selectors)
+   ============================== */
 img.logo,
 .logoImg,
 .footerLogo {
-  filter: none !important;
-  -webkit-filter: none !important;
   mix-blend-mode: normal !important;
   opacity: 1 !important;
   object-fit: contain;
-  /* Do NOT set width/height here — let component CSS control sizing */
 }
 
-/* Kill any dark-mode or media-query filter overrides */
-@media (prefers-color-scheme: dark) {
+/* ===================================================
+   DARK MODE — Tailwind Room Component Overrides
+   Targets inline Tailwind classes used in room pages
+   =================================================== */
 
-  img.logo,
-  .logoImg,
-  .footerLogo {
-    filter: none !important;
-    -webkit-filter: none !important;
-  }
+/* Page root */
+[data-theme='dark'] main {
+  background-color: var(--section-bg);
+  color: var(--app-text);
 }
 
-/* Mobile Typo */
+/* Section-level backgrounds */
+[data-theme='dark'] section {
+  background-color: var(--section-bg);
+  transition: background-color 0.3s ease;
+}
+
+/* Alternate-section backgrounds (bg-[#FAF9F6] etc.) */
+[data-theme='dark'] section.bg-\[\#FAF9F6\],
+[data-theme='dark'] section.bg-\[\#faf9f6\],
+[data-theme='dark'] section.bg-\[\#F8F8F8\] {
+  background-color: var(--section-bg-alt) !important;
+}
+
+/* White sections */
+[data-theme='dark'] section.bg-white {
+  background-color: var(--section-bg) !important;
+}
+
+/* Card / inner div boxes — white bg in dark = card-bg */
+[data-theme='dark'] .bg-white:not(button):not(input):not(select):not(textarea) {
+  background-color: var(--card-bg);
+}
+
+/* Input/select/textarea override */
+[data-theme='dark'] input,
+[data-theme='dark'] select,
+[data-theme='dark'] textarea {
+  background-color: var(--input-bg);
+  color: var(--input-text);
+  border-color: var(--input-border);
+}
+
+/* Heading text in room pages */
+[data-theme='dark'] .text-black {
+  color: var(--app-text) !important;
+}
+
+[data-theme='dark'] .text-\[\#1A1A1A\] {
+  color: var(--app-text) !important;
+}
+
+/* Border overrides */
+[data-theme='dark'] .border-gray-100,
+[data-theme='dark'] .border-black\/5,
+[data-theme='dark'] .border-black\/\[0\.03\] {
+  border-color: var(--border-card) !important;
+}
+
+/* Muted text overrides */
+[data-theme='dark'] .text-\[\#555\],
+[data-theme='dark'] .text-\[\#666\] {
+  color: var(--app-text-muted) !important;
+}
+
+/* Alternate light grey input rows (RoomBookingCard) */
+[data-theme='dark'] .bg-\[\#F8F8F8\] {
+  background-color: var(--card-bg-alt) !important;
+}
+
+/* SpecialOffer warm card */
+[data-theme='dark'] .bg-\[\#FFF5F0\] {
+  background-color: #1E1209 !important;
+}
+[data-theme='dark'] .border-\[\#FFE4D6\] {
+  border-color: #3D1F0D !important;
+}
+
+/* Smooth global transitions */
+*, *::before, *::after {
+  transition-property: background-color, color, border-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+/* Responsive Grid Adjustments */
 @media (max-width: 768px) {
   :root {
-    --section-padding: 56px;
+    --section-padding: var(--section-padding-mobile);
+  }
+  
+  .hider-main-container {
+    padding: 0 var(--app-container-px) !important;
   }
 
   h1 {
-    font-size: 34px;
+    font-size: clamp(38px, 10vw, 64px);
   }
 
   h2 {
-    font-size: 24px;
+    font-size: clamp(28px, 6vw, 48px);
+  }
+
+  h3 {
+    font-size: clamp(20px, 3vw, 28px);
   }
 
   .intro {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
   }
 }

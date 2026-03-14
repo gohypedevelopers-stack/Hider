@@ -1,5 +1,6 @@
 "use client";
 import Link from 'next/link';
+import { Facebook, Instagram, MessageCircle } from 'lucide-react';
 import { siteConfig, BRAND_LOGO } from '../config';
 import styles from './Footer.module.css';
 
@@ -14,40 +15,56 @@ export default function Footer() {
                 {/* Brand */}
                 <div>
                     <Link href="/">
-                        <img src={BRAND_LOGO} alt="Hider Hotel" className={styles.footerLogo} />
+                        <img src={BRAND_LOGO} alt="Hotel Hider" className={styles.footerLogo} />
                     </Link>
-                    <p className={styles.tagline}>{siteConfig.tagline}</p>
-                </div>
-
-                {/* Links */}
-                <div>
-                    <h4 className={styles.h4}>Explore</h4>
-                    <div className={styles.linkList}>
-                        <button onClick={() => scrollTo('home')} className={styles.footerLink}>Home</button>
-                        <button onClick={() => scrollTo('rooms')} className={styles.footerLink}>Rooms</button>
-                        <button onClick={() => scrollTo('amenities')} className={styles.footerLink}>Amenities</button>
-                        <button onClick={() => scrollTo('gallery')} className={styles.footerLink}>Gallery</button>
+                    <p className={styles.tagline}>
+                        Hotel Hider defines a new era of luxury hospitality in Mansa, Gujarat. Experience unparalleled comfort and serene elegance in every corner of our property.
+                    </p>
+                    <div className={styles.socials}>
+                        <a href="https://instagram.com" target="_blank" rel="noreferrer" className={styles.socialLink} aria-label="Instagram">
+                            <Instagram size={16} />
+                        </a>
+                        <a href="https://facebook.com" target="_blank" rel="noreferrer" className={styles.socialLink} aria-label="Facebook">
+                            <Facebook size={16} />
+                        </a>
+                        <a href={`https://wa.me/${siteConfig.whatsapp.number}`} target="_blank" rel="noreferrer" className={styles.socialLink} aria-label="WhatsApp">
+                            <MessageCircle size={16} />
+                        </a>
                     </div>
                 </div>
 
-                {/* Contact */}
+                <div>
+                    <h4 className={styles.h4}>Quick Links</h4>
+                    <div className={styles.linkList}>
+                        <button onClick={() => scrollTo('home')} className={styles.footerLink}>Home</button>
+                        <button onClick={() => scrollTo('rooms')} className={styles.footerLink}>Rooms & Suites</button>
+                        <button onClick={() => scrollTo('amenities')} className={styles.footerLink}>Amenities</button>
+                        <button onClick={() => scrollTo('gallery')} className={styles.footerLink}>Gallery</button>
+                        <button onClick={() => scrollTo('contact')} className={styles.footerLink}>Contact Us</button>
+                    </div>
+                </div>
+
                 <div>
                     <h4 className={styles.h4}>Contact</h4>
                     <div className={styles.linkList}>
-                        <p className="text-gray-500 mb-2">{siteConfig.contact.address}</p>
+                        <p className={styles.contactText}>{siteConfig.contact.address}</p>
                         <a href={`tel:${siteConfig.contact.phone}`} className={styles.footerLink}>{siteConfig.contact.displayPhone}</a>
-                        <a href={`mailto:${siteConfig.contact.email}`} className={styles.footerLink}>contact@hiderhotel.com</a>
-                        <button onClick={() => scrollTo('booking')} className={styles.footerLink}>Mumbai, India</button>
+                        <a href={`mailto:${siteConfig.contact.email}`} className={styles.footerLink}>{siteConfig.contact.email}</a>
+                        <button onClick={() => scrollTo('booking')} className={styles.footerLink}>Make a Reservation</button>
                     </div>
                 </div>
             </div>
 
             <div className={styles.footerBottom}>
-                <div className="flex flex-col md:flex-row justify-between items-center max-w-[1400px] mx-auto px-8 gap-4">
-                    <p>&copy; {new Date().getFullYear()} Hider Hotel. All rights reserved.</p>
-                    <div className="flex gap-8">
-                        <Link href="/privacy" className="hover:text-[#E85D1A] transition-colors">Privacy Policy</Link>
-                        <Link href="/terms" className="hover:text-[#E85D1A] transition-colors">Terms of Service</Link>
+                <div className="flex flex-col gap-2">
+                    <p>&copy; 2026 Hotel Hider. Art of Hospitality.</p>
+                    {siteConfig.contact.gstNumber && <p style={{ opacity: 0.5, fontSize: '10px' }}>GST: {siteConfig.contact.gstNumber}</p>}
+                </div>
+                <div className="flex flex-col items-end gap-2 text-right">
+                    <p>Check-in / Check-out: 12:00 Noon</p>
+                    <div className="flex gap-6">
+                        <Link href="/privacy" className={styles.footerLink} style={{ fontSize: '12px' }}>Privacy Policy</Link>
+                        <Link href="/terms" className={styles.footerLink} style={{ fontSize: '12px' }}>Terms of Service</Link>
                     </div>
                 </div>
             </div>

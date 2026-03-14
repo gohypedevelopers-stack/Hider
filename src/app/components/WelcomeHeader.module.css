@@ -1,0 +1,104 @@
+.section {
+    padding: 140px 0;
+    background: var(--app-bg);
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 48px;
+}
+
+.label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    color: var(--brand-gold);
+    margin-bottom: 32px;
+}
+
+.title {
+    font-family: var(--font-heading);
+    font-size: clamp(32px, 5vw, 56px);
+    color: var(--app-text);
+    margin-bottom: 32px;
+    font-weight: 500;
+}
+
+.goldDivider {
+    width: 60px;
+    height: 1px;
+    background: var(--brand-gold);
+    margin: 0 auto 40px;
+}
+
+.subtitle {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    color: var(--brand-gold);
+    margin-bottom: 32px;
+    font-weight: 400;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--app-text-muted);
+    margin-bottom: 48px;
+    font-weight: 300;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+
+.primaryBtn {
+    padding: 18px 36px;
+    background: var(--app-text);
+    color: var(--app-bg);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    transition: all 0.4s;
+}
+
+.primaryBtn:hover {
+    background: var(--brand-gold);
+}
+
+.secondaryBtn {
+    padding: 18px 36px;
+    border: 1px solid var(--app-text);
+    color: var(--app-text);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    background: transparent;
+    transition: all 0.4s;
+}
+
+.secondaryBtn:hover {
+    background: var(--brand-charcoal);
+    color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 100px 0;
+    }
+    
+    .buttons {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

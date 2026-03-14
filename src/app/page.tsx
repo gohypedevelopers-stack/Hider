@@ -1,10 +1,14 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import WelcomeHeader from './components/WelcomeHeader';
 import Rooms from './components/Rooms';
+import AboutUs from './components/AboutUs';
 import Amenities from './components/Amenities';
 import Gallery from './components/Gallery';
+import NearbyPlaces from './components/NearbyPlaces';
 import Contact from './components/Contact';
 import BookingForm from './components/BookingForm';
+import BookingBar from './components/BookingBar';
 import Footer from './components/Footer';
 import { siteConfig } from './config';
 import Link from 'next/link';
@@ -14,8 +18,12 @@ export default function Home() {
     <main className="min-h-screen">
       <Navbar />
       <Hero />
+      <BookingBar />
+      <WelcomeHeader />
+      <AboutUs />
       <Rooms />
       <Amenities />
+      <NearbyPlaces />
       <Gallery />
       <Contact />
       <BookingForm />

@@ -18,8 +18,11 @@ const config: Config = {
         }
       },
       fontFamily: {
-        playfair: ["var(--font-heading)", "serif"],
-        poppins: ["var(--font-body)", "sans-serif"],
+        sans: ["var(--font-inter)", "sans-serif"],
+        serif: ["var(--font-inter)", "sans-serif"],
+        heading: ["var(--font-inter)", "sans-serif"],
+        playfair: ["var(--font-inter)", "sans-serif"],
+        poppins: ["var(--font-inter)", "sans-serif"],
       }
     },
   },

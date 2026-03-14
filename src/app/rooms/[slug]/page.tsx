@@ -20,8 +20,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const room = roomsData.find(r => r.slug === slug);
   return {
-    title: room ? `${room.title} | Luxury Hotel Room in Manesar | Hotel Hider` : 'Room Not Found',
-    description: room?.tagline || 'Experience high-end boutique hospitality in Manesar, Gurgaon.',
+    title: room ? `${room.title} | Luxury Hotel Room in Mansa | Hotel Hider` : 'Room Not Found',
+    description: room?.tagline || 'Experience high-end boutique hospitality in Mansa, Gujarat.',
   };
 }
 
@@ -45,7 +45,7 @@ export default async function RoomPage({ params }: PageProps) {
   ];
 
   return (
-    <main className="min-h-screen bg-white selection:bg-[#C5A059] selection:text-white">
+    <main className="min-h-screen bg-[var(--app-bg)] selection:bg-[#C5A059] selection:text-white overflow-x-clip">
       <Navbar />
       
       <RoomHero 
@@ -54,24 +54,26 @@ export default async function RoomPage({ params }: PageProps) {
         price={room.price} 
       />
 
-      {/* Main Content Flow - Forced Grid via Inline Styles */}
       <div 
-        className="max-w-[1400px] mx-auto px-6 pb-32"
+        className="hider-main-container mx-auto pb-64"
         style={{ 
           display: 'grid', 
-          gridTemplateColumns: 'minmax(0, 1fr) 450px', 
-          gap: '60px',
-          alignItems: 'start' 
+          gridTemplateColumns: 'minmax(0, 1fr) 420px', 
+          gap: '100px',
+          paddingTop: '160px',
+          alignItems: 'start',
+          width: '100%'
         }}
       >
         
-        {/* Main Content Column */}
-        <div style={{ width: '100%', minWidth: 0 }}>
+        {/* Main Narrative Column */}
+        <div className="flex flex-col gap-[200px]">
           
           {/* Room Experience */}
           <RoomExperience 
             title={room.title}
             description={room.description}
+            features={room.features}
           />
 
           {/* Amenities Grid */}
@@ -83,11 +85,11 @@ export default async function RoomPage({ params }: PageProps) {
         </div>
 
         {/* Sidebar Area for Booking Card */}
-        <div style={{ 
+        <aside style={{ 
           position: 'sticky', 
-          top: '120px', 
+          top: '140px', 
           height: 'fit-content',
-          width: '450px',
+          width: '100%',
           zIndex: 40 
         }}>
           <RoomBookingCard 
@@ -96,7 +98,7 @@ export default async function RoomPage({ params }: PageProps) {
             guests={room.guests}
           />
           <SpecialOffer />
-        </div>
+        </aside>
 
       </div>
 

@@ -16,10 +16,11 @@ export default function Gallery() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
+                    transition={{ duration: 0.8 }}
                 >
+                    <span className={styles.eyebrow}>Visual Journey</span>
                     <h2>Gallery</h2>
-                    <p>A glimpse into our luxurious spaces in Manesar.</p>
+                    <p>A glimpse into the refined aesthetics and serene atmosphere of Hotel Hider.</p>
                 </motion.div>
 
                 <div className={styles.grid}>
@@ -28,9 +29,9 @@ export default function Gallery() {
                             key={index}
                             className={styles.imageWrapper}
                             onClick={() => setSelectedImage(src)}
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.05, duration: 0.5 }}
+                            transition={{ delay: index * 0.05, duration: 0.8 }}
                             viewport={{ once: true }}
                         >
                             <img src={src} alt="Hider Gallery" className={styles.image} loading="lazy" />

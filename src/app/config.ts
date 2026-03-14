@@ -1,15 +1,16 @@
 export const BRAND_LOGO = "/lobo.png";
 
 export const siteConfig = {
-    hotelName: "Hider",
-    tagline: "Comfort & Luxury in Manesar, Gurgaon",
-    location: "Manesar, Gurgaon, Haryana, India",
+    hotelName: "Hotel Hider",
+    tagline: "Unparalleled Luxury in Mansa, Gujarat",
+    location: "Mansa, Gujarat, India",
     contact: {
         phone: "+919876543210", // Placeholder
         displayPhone: "+91 98765 43210",
-        email: "reservations@hiderhotel.com",
-        address: "Manesar, Gurgaon, Haryana, India",
-        mapQuery: "Manesar, Gurugram, Haryana"
+        email: "reservations@hotelhider.com",
+        address: "Mansa, Gujarat, India",
+        mapQuery: "Mansa, Gujarat, India",
+        gstNumber: "" // Placeholder
     },
     whatsapp: {
         number: "919876543210", // No plus sign for API
