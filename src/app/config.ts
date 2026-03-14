@@ -1,4 +1,4 @@
-export const BRAND_LOGO = "/lobo.png";
+export const BRAND_LOGO = "/logo.png";
 
 export const siteConfig = {
     hotelName: "Hotel Hider",

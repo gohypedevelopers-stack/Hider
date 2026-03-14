@@ -48,12 +48,12 @@ const cardVariants = {
 export default function AmenitiesGrid({ amenities }: AmenitiesGridProps) {
   return (
     <section className="relative mt-16">
-      <div className="flex items-center gap-3 mb-10">
+      <div className="flex items-center gap-3 mb-10 max-w-4xl">
         <Sparkles size={18} className="text-[var(--brand-orange)]" />
         <h3 className="text-2xl font-bold text-[#1a1a1a]">Room Amenities</h3>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl">
         {amenities.map((item, index) => {
           const Icon = getIcon(item.name);
           return (
@@ -68,7 +68,7 @@ export default function AmenitiesGrid({ amenities }: AmenitiesGridProps) {
               <div className="w-12 h-12 rounded-xl bg-orange-50 flex items-center justify-center shrink-0">
                 <Icon size={24} className="text-[var(--brand-orange)]" strokeWidth={1.5} />
               </div>
-              <span className="text-lg font-medium text-gray-800">{item.name}</span>
+              <span className="text-lg font-medium text-[var(--app-text)]">{item.name}</span>
             </motion.div>
           );
         })}

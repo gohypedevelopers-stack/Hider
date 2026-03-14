@@ -31,7 +31,7 @@ export default function HighlightsSection({ highlights }: HighlightsSectionProps
         <div className="flex flex-col lg:flex-row gap-24 items-end mb-32">
           <div className="lg:w-1/2 space-y-8">
             <span className="text-[11px] font-bold uppercase tracking-[0.6em] text-[#C5A059]">Refined Quality</span>
-            <h2 className="text-5xl md:text-6xl font-playfair text-black uppercase tracking-[0.2em] leading-tight italic">Room Highlights</h2>
+            <h2 className="text-5xl md:text-6xl font-playfair text-[var(--app-text)] uppercase tracking-[0.2em] leading-tight italic">Room Highlights</h2>
           </div>
           <div className="lg:w-1/2">
             <p className="text-gray-400 font-poppins font-light leading-[2] max-w-md border-l border-[#C5A059]/20 pl-10 italic">
@@ -55,7 +55,7 @@ export default function HighlightsSection({ highlights }: HighlightsSectionProps
                 <div className="mb-8 p-4 bg-white inline-flex rounded-full group-hover:bg-black group-hover:text-white transition-all duration-700 shadow-sm border border-black/5">
                   <Icon size={24} strokeWidth={1} />
                 </div>
-                <h3 className="text-xl font-playfair text-black mb-4 uppercase tracking-wider">{h.title}</h3>
+                <h3 className="text-xl font-playfair text-[var(--app-text)] mb-4 uppercase tracking-wider">{h.title}</h3>
                 <p className="text-sm text-gray-400 font-poppins font-light leading-relaxed">{h.description}</p>
                 <div className="mt-8 transition-transform group-hover:translate-x-2 duration-500">
                   <div className="w-8 h-[2px] bg-[#C5A059]"></div>

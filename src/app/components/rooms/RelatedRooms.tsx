@@ -11,7 +11,7 @@ interface RelatedRoomsProps {
 
 export default function RelatedRooms({ rooms }: RelatedRoomsProps) {
   return (
-    <section className="py-32 bg-[var(--app-bg-accent)]">
+    <section className="py-32 bg-[var(--app-bg-accent)] overflow-hidden">
       <div className="lux-container">
 
         {/* Header */}
@@ -25,7 +25,7 @@ export default function RelatedRooms({ rooms }: RelatedRoomsProps) {
           <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-[var(--brand-gold)] block mb-4">
             Curated Selection
           </span>
-          <h2 className="text-4xl md:text-5xl font-serif text-[var(--app-text)] italic">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-[var(--app-text)] italic">
             Alternative Retreats
           </h2>
         </motion.div>

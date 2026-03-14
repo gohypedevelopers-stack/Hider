@@ -11,7 +11,7 @@ export default function HouseRules() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-playfair mb-4 uppercase tracking-[0.2em]">Guest Policies</h2>
-            <div className="w-12 h-1 bg-black mx-auto"></div>
+            <div className="w-12 h-1 bg-[var(--brand-gold)] mx-auto"></div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -23,7 +23,7 @@ export default function HouseRules() {
                 <ul className="space-y-4">
                   {policy.items.map((item, i) => (
                     <li key={i} className="flex items-center text-sm font-poppins text-gray-600 font-light">
-                      <span className="w-4 h-[1px] bg-black/20 mr-4"></span>
+                      <span className="w-4 h-[1px] bg-[var(--app-border)] mr-4"></span>
                       {item}
                     </li>
                   ))}

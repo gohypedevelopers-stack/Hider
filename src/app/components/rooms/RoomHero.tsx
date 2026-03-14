@@ -18,7 +18,7 @@ export default function RoomHero({ title, images, price = "4,500", tagline = "A 
     <section 
       className="relative pt-6 pb-12 overflow-x-clip px-[var(--app-container-px)]"
     >
-      <div className="max-w-[var(--container-width)] mx-auto relative h-[700px] md:h-[750px] rounded-[3rem] overflow-hidden group shadow-[0_32px_80px_rgba(0,0,0,0.15)] bg-black">
+      <div className="max-w-[var(--container-width)] mx-auto relative h-[600px] md:h-[750px] rounded-[3rem] overflow-hidden group shadow-[0_32px_80px_rgba(0,0,0,0.15)] bg-black">
         {/* Main Image with Ken Burns Effect */}
         <motion.div
           className="absolute inset-0"
@@ -60,7 +60,7 @@ export default function RoomHero({ title, images, price = "4,500", tagline = "A 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-              className="text-6xl md:text-8xl font-serif text-white m-0 leading-[0.9] drop-shadow-2xl"
+              className="text-5xl md:text-7xl lg:text-8xl font-serif text-white m-0 leading-[0.9] drop-shadow-2xl"
               style={{ fontFamily: 'var(--font-heading)' }}
             >
               {title.split(' ').map((word, i) => (

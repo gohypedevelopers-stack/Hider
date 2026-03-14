@@ -62,7 +62,7 @@
   }
 }
 
-[data-theme='dark'] {
+:root[data-theme='dark'] {
   --app-bg: #0D0D0D;
   --app-bg-accent: #111111;
   --app-text: #FFFFFF;
@@ -81,6 +81,13 @@
   
   --glass-bg: rgba(17, 17, 17, 0.6);
   --glass-border: rgba(255, 255, 255, 0.05);
+
+  /* Contrast Overrides for common tailwind/hardcoded colors */
+  --tw-text-gray-800: #E5E7EB;
+  --tw-text-black: #FFFFFF;
+  --tw-bg-white: #151515;
+  --tw-bg-gray-100: #1A1A1A;
+  --tw-border-gray-100: rgba(255, 255, 255, 0.1);
 }
 
 /* Luxury Texture Overlay */
@@ -262,6 +269,12 @@ img.logo,
   mix-blend-mode: normal !important;
   opacity: 1 !important;
   object-fit: contain;
+  transition: filter 0.3s ease;
+}
+
+[data-theme='dark'] .logoImg,
+[data-theme='dark'] .footerLogo {
+  filter: brightness(0) invert(1) !important;
 }
 
 /* ===================================================
@@ -340,6 +353,27 @@ img.logo,
 }
 [data-theme='dark'] .border-\[\#FFE4D6\] {
   border-color: #3D1F0D !important;
+}
+
+/* Hardcoded Tailwind overrides for dark mode */
+[data-theme='dark'] .text-gray-800 {
+  color: var(--tw-text-gray-800) !important;
+}
+
+[data-theme='dark'] .text-\[\#1a1a1a\] {
+  color: var(--app-text) !important;
+}
+
+[data-theme='dark'] .bg-orange-50 {
+  background-color: rgba(237, 107, 36, 0.1) !important;
+}
+
+[data-theme='dark'] .bg-white {
+  background-color: var(--card-bg) !important;
+}
+
+[data-theme='dark'] .border-gray-100 {
+  border-color: var(--app-border) !important;
 }
 
 /* Smooth global transitions */

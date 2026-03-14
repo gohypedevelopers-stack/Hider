@@ -27,10 +27,10 @@ export default function RoomOverview({ description, specs }: RoomOverviewProps) 
         <div className="flex flex-col lg:flex-row gap-20 items-stretch">
           <div className="lg:w-3/5 flex flex-col justify-center">
             <span className="text-sm font-poppins tracking-[0.3em] text-gray-400 uppercase mb-4 block">Refined Comfort</span>
-            <h2 className="text-4xl md:text-5xl font-playfair mb-10 text-black leading-tight italic">
+            <h2 className="text-4xl md:text-5xl font-playfair mb-10 text-[var(--app-text)] leading-tight italic">
               "Experience the ultimate blend of style and serenity."
             </h2>
-            <div className="w-20 h-px bg-black/10 mb-10"></div>
+            <div className="w-20 h-px bg-[var(--app-border)] mb-10"></div>
             <p className="text-xl text-gray-600 leading-relaxed font-poppins font-light">
               {description}
             </p>

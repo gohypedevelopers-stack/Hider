@@ -17,7 +17,7 @@ export default function RoomGallery({ images }: RoomGalleryProps) {
     <section className="relative mt-16">
       <div className="flex items-center gap-3 mb-10">
         <ImageIcon size={18} className="text-[var(--brand-orange)]" />
-        <h3 className="text-2xl font-bold text-[#1a1a1a]">Gallery</h3>
+        <h3 className="text-2xl font-bold text-[var(--app-text)]">Gallery</h3>
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
