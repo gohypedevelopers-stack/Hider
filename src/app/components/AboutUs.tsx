@@ -6,7 +6,7 @@ import styles from './AboutUs.module.css';
 export default function AboutUs() {
     return (
         <section id="about" className={styles.section}>
-            <div className="lux-container">
+            <div className={`lux-container ${styles.inner}`}>
                 <motion.div
                     className={styles.imageWrapper}
                     initial={{ opacity: 0, x: -60, scale: 1.05 }}
@@ -36,9 +36,9 @@ export default function AboutUs() {
                     <h2>About Us</h2>
                     <div className={styles.divider} />
                     <p>
-                        Hotel Hider offers a peaceful and comfortable stay in the heart of Manesar, Gurgaon. 
-                        Designed to meet the needs of both business and leisure travelers, our hotel is a sanctuary of 
-                        modern elegance and attentive service.
+                        Experience a relaxing and comfortable stay at Hotel Hider, conveniently located near NH-48 and IMT Manesar. 
+                        Our property offers spacious rooms, modern amenities, and warm hospitality for business travelers, families, 
+                        and leisure guests seeking a refined stay in Gurgaon and Manesar.
                     </p>
                     <p>
                         Located near NH-48 and IMT Manesar, Hotel Hider offers easy access to industrial areas, 
@@ -54,9 +54,9 @@ export default function AboutUs() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: 0.4 }}
                             >
-                                <span className="text-[var(--brand-orange)]">24/7</span>
+                                <span className="text-[var(--brand-orange)]">Prime</span>
                             </motion.div>
-                            <span className={styles.statLabel}>Wake-Up Call Service</span>
+                            <span className={styles.statLabel}>Location</span>
                         </div>
                         <div className={styles.highlight}>
                             <motion.div 
@@ -65,9 +65,9 @@ export default function AboutUs() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: 0.5 }}
                             >
-                                <span className="text-[var(--brand-orange)]">Secure</span>
+                                <span className="text-[var(--brand-orange)]">Scenic</span>
                             </motion.div>
-                            <span className={styles.statLabel}>CCTV Security</span>
+                            <span className={styles.statLabel}>Views</span>
                         </div>
                         <div className={styles.highlight}>
                             <motion.div 
@@ -76,9 +76,9 @@ export default function AboutUs() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: 0.6 }}
                             >
-                                <span className="text-[var(--brand-orange)]">Daily</span>
+                                <span className="text-[var(--brand-orange)]">Stylish</span>
                             </motion.div>
-                            <span className={styles.statLabel}>Daily Housekeeping</span>
+                            <span className={styles.statLabel}>Décor</span>
                         </div>
                     </div>
                 </motion.div>

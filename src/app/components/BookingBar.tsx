@@ -6,6 +6,10 @@ import styles from './BookingBar.module.css';
 export default function BookingBar() {
     const [guests, setGuests] = useState('2');
 
+    const scrollTo = (id: string) => {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    };
+
     return (
         <div className={styles.wrapper}>
             <div className={styles.container}>
@@ -75,7 +79,7 @@ export default function BookingBar() {
                 </div>
 
                 {/* Submit */}
-                <button className={styles.submitBtn}>
+                <button className={styles.submitBtn} onClick={() => scrollTo('booking')}>
                     Book Now
                 </button>
             </div>

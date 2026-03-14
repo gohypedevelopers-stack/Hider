@@ -36,14 +36,6 @@ export default function Hero() {
 
             <div className={styles.content}>
                 <div className={styles.contentInner}>
-                    <motion.span 
-                        className="eyebrow"
-                        initial={{ opacity: 0, letterSpacing: '1.2em' }}
-                        animate={{ opacity: 1, letterSpacing: '0.5em' }}
-                        transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
-                    >
-                        Manesar, Gurgaon, India
-                    </motion.span>
                     
                     <h1 className={styles.title}>
                         {"Welcome to Hotel Hider".split(" ").map((word, i) => (
@@ -89,7 +81,7 @@ export default function Hero() {
                             className={styles.secondaryBtn}
                             style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }}
                         >
-                            WhatsApp Us
+                            Contact Us
                         </a>
                     </motion.div>
                 </div>

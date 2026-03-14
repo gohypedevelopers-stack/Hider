@@ -1,8 +1,14 @@
 .wrapper {
-    position: relative;
+    position: sticky;
+    top: 90px; /* Aligns below the scrolled navbar */
     width: 100%;
     z-index: 100;
-    margin-top: 0;
+    transition: top 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+@media (max-width: 1100px) {
+    .wrapper {
+        top: 0; /* Or adjust for mobile nav if needed */
+    }
 }
 
 .container {
@@ -129,15 +135,6 @@
 }
 
 @media (max-width: 768px) {
-    .wrapper {
-        position: relative;
-        bottom: 0;
-        transform: none;
-        left: 0;
-        width: 100%;
-        margin-top: 60px;
-    }
-
     .field {
         flex: 1 0 100%;
     }

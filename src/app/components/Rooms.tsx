@@ -12,7 +12,7 @@ export default function Rooms() {
             slug: "standard-room",
             name: "Standard Room",
             price: "₹2,500 / Night",
-            features: "Queen Bed • Modern AC • 250 sq.ft",
+            features: "Queen Bed • Cozy Stay • Smart Comfort",
             image: siteConfig.images.rooms.standard
         },
         {
@@ -20,7 +20,7 @@ export default function Rooms() {
             slug: "deluxe-room",
             name: "Deluxe Room",
             price: "₹3,500 / Night",
-            features: "King Bed • Spacious Layout • 350 sq.ft",
+            features: "King Bed • Elegant Interior • Spacious Interior",
             image: siteConfig.images.rooms.deluxe
         },
         {
@@ -28,7 +28,7 @@ export default function Rooms() {
             slug: "super-deluxe-room",
             name: "Super Deluxe Room",
             price: "₹4,500 / Night",
-            features: "King Bed • Maximum Space • 500 sq.ft",
+            features: "King Bed • Luxury Comfort • Extra Space",
             image: siteConfig.images.rooms.family
         }
     ];

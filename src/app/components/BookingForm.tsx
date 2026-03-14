@@ -42,7 +42,7 @@ Message: ${formData.message}`;
 
     return (
         <section id="booking" className={styles.section}>
-            <div className="container mx-auto px-4">
+            <div className="lux-container">
                 <motion.div
                     className={styles.intro}
                     initial={{ opacity: 0, y: 20 }}
@@ -52,7 +52,7 @@ Message: ${formData.message}`;
                 >
                     <span className={styles.eyebrow}>Reservations</span>
                     <h2>Book Your Collection</h2>
-                    <p>Experience the finest hospitality in Mansa. Our dedicated team is ready to assist you.</p>
+                    <p>Experience the finest hospitality in Manesar. Our dedicated team is ready to assist you.</p>
                 </motion.div>
 
                 <motion.div
