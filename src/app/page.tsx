@@ -23,10 +23,10 @@ export default function Home() {
       <AboutUs />
       <Rooms />
       <Amenities />
-      <NearbyPlaces />
       <Gallery />
-      <Contact />
       <BookingForm />
+      <NearbyPlaces />
+      <Contact />
       <Footer />
 
       {/* Floating WhatsApp Button - Single Instance */}

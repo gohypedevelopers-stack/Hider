@@ -29,7 +29,7 @@ export default function WelcomeHeader() {
                             Explore Our Rooms
                         </button>
 
-                        <button onClick={openWhatsApp} className={styles.secondaryBtn}>
+                        <button onClick={() => scrollTo('booking')} className={styles.secondaryBtn}>
                             RESERVATIONS
                         </button>
                     </div>

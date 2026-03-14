@@ -1,13 +1,11 @@
 .wrapper {
-    position: sticky;
-    top: 90px; /* Aligns below the scrolled navbar */
+    position: relative;
     width: 100%;
     z-index: 100;
-    transition: top 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 @media (max-width: 1100px) {
     .wrapper {
-        top: 0; /* Or adjust for mobile nav if needed */
+        position: relative;
     }
 }
 

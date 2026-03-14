@@ -16,8 +16,8 @@ export default function AboutUs() {
                 >
                     <div className={styles.imageInner}>
                         <Image
-                            src="/1.jpeg"
-                            alt="Hotel Hider – Manesar, Gurgaon"
+                            src="/hotel-exterior.jpg"
+                            alt="Hotel Hider Exterior – Manesar, Gurgaon"
                             fill
                             sizes="(max-width: 900px) 100vw, 50vw"
                             style={{ objectFit: 'cover' }}

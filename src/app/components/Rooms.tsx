@@ -20,7 +20,7 @@ export default function Rooms() {
             slug: "deluxe-room",
             name: "Deluxe Room",
             price: "₹3,500 / Night",
-            features: "King Bed • Elegant Interior • Spacious Interior",
+            features: "King Bed • Elegant Interior • Extra Space",
             image: siteConfig.images.rooms.deluxe
         },
         {
@@ -28,7 +28,7 @@ export default function Rooms() {
             slug: "super-deluxe-room",
             name: "Super Deluxe Room",
             price: "₹4,500 / Night",
-            features: "King Bed • Luxury Comfort • Extra Space",
+            features: "King Bed • Luxury Comfort • Grand Space",
             image: siteConfig.images.rooms.family
         }
     ];
