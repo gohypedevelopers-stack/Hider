@@ -75,13 +75,13 @@ export const roomsData: RoomData[] = [
   {
     slug: "standard-room",
     title: "Standard Room",
-    tagline: "Comfortable & peaceful stay in the heart of Manesar",
+    tagline: "Comfort & Luxury in Manesar, Gurgaon",
     price: "2,500",
     bed: "Queen Size Bed",
     guests: "2 Guests",
     size: "250 sq. ft",
     view: "Garden View",
-    bathroom: "Private Bathroom with Hot & Cold Water",
+    bathroom: "Private Bathroom",
     checkIn: "12:00 PM",
     checkOut: "12:00 PM",
     quote: "Comfort, cleanliness, and care — all in one peaceful room.",
@@ -104,10 +104,7 @@ export const roomsData: RoomData[] = [
       { name: "Private Bathroom", category: "Bathroom" },
       { name: "Hot and Cold water", category: "Bathroom" },
       { name: "Room Service", category: "Services" },
-      { name: "Daily Housekeeping", category: "Services" },
-      { name: "Breakfast Included", category: "Services" },
-      { name: "Iron with Boards", category: "In-Room" },
-      { name: "Hot water kettle", category: "In-Room" }
+      { name: "Daily Housekeeping", category: "Services" }
     ],
     highlights: [
       { title: "Queen Size Bed", description: "Comfortable queen bed with fresh premium bedding for a restful night's sleep.", icon: "Bed" },
@@ -126,8 +123,8 @@ export const roomsData: RoomData[] = [
   {
     slug: "deluxe-room",
     title: "Deluxe Room",
-    tagline: "A sanctuary of style and comfort designed for the modern traveler.",
-    price: "4,500",
+    tagline: "Comfort & Luxury in Manesar, Gurgaon",
+    price: "3,500",
     bed: "King Size Bed",
     guests: "2 to 3 Guests",
     size: "400 sq. ft",
@@ -148,7 +145,17 @@ export const roomsData: RoomData[] = [
       "Room Service",
       "Daily Housekeeping"
     ],
-    amenities: commonAmenities.filter(a => !['Lounge Area', 'Dining Space'].includes(a.name)),
+    amenities: [
+      { name: "King Size Bed", category: "In-Room" },
+      { name: "Air Conditioning", category: "In-Room" },
+      { name: "Free High-Speed WiFi", category: "Services" },
+      { name: "Entertainment TV", category: "In-Room" },
+      { name: "Spacious Interior", category: "In-Room" },
+      { name: "Private Bathroom", category: "Bathroom" },
+      { name: "Hot & Cold Water", category: "Bathroom" },
+      { name: "Room Service", category: "Services" },
+      { name: "Daily Housekeeping", category: "Services" }
+    ],
     highlights: [
       { title: "King Size Luxury", description: "Expansive bed for ultimate relaxation.", icon: "BedDouble" },
       { title: "Private Balcony", description: "Your own space with city views.", icon: "Eye" },
@@ -166,7 +173,7 @@ export const roomsData: RoomData[] = [
   {
     slug: "super-deluxe-room",
     title: "Super Deluxe Room",
-    tagline: "Maximum space and ultimate luxury for groups",
+    tagline: "Comfort & Luxury in Manesar, Gurgaon",
     price: "4,500",
     bed: "King Size Bed",
     guests: "4 to 6 Guests",
@@ -188,7 +195,17 @@ export const roomsData: RoomData[] = [
       "Room Service",
       "Daily Housekeeping"
     ],
-    amenities: commonAmenities,
+    amenities: [
+      { name: "King Size Bed", category: "In-Room" },
+      { name: "Spacious Layout", category: "In-Room" },
+      { name: "Air Conditioning", category: "In-Room" },
+      { name: "Free High-Speed WiFi", category: "Services" },
+      { name: "Entertainment TV", category: "In-Room" },
+      { name: "Private Bathroom", category: "Bathroom" },
+      { name: "Hot & Cold Water", category: "Bathroom" },
+      { name: "Room Service", category: "Services" },
+      { name: "Daily Housekeeping", category: "Services" }
+    ],
     highlights: [
       { title: "Double Suite", description: "Two separate bedrooms for privacy.", icon: "Home" },
       { title: "Grand View", description: "Unobstructed premium landscapes.", icon: "Mountain" },

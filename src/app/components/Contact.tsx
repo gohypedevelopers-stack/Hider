@@ -7,7 +7,7 @@ export default function Contact() {
 
     return (
         <section id="contact" className={styles.section}>
-            <div className="container mx-auto px-4">
+            <div className="lux-container">
 
                 <div className={styles.wrapper}>
                     {/* Info Side */}

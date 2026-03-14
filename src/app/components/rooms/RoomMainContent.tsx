@@ -12,17 +12,11 @@ export default function RoomMainContent({ children }: RoomMainContentProps) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1, delay: 0.5 }}
-      className="hider-main-container mx-auto pb-64"
-      style={{ 
-        display: 'grid', 
-        gridTemplateColumns: 'minmax(0, 1fr) 450px', 
-        gap: '120px',
-        paddingTop: '160px',
-        alignItems: 'start',
-        width: '100%'
-      }}
+      className="lux-container pb-40 lg:pb-64 pt-16 md:pt-32"
     >
-      {children}
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-24 lg:gap-32 items-start">
+        {children}
+      </div>
     </motion.div>
   );
 }

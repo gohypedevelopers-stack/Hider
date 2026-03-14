@@ -16,8 +16,7 @@ export default function RoomHero({ title, images, price = "4,500", tagline = "A 
   
   return (
     <section 
-      className="relative pt-6 pb-12 overflow-x-clip"
-      style={{ paddingLeft: 'var(--app-container-px)', paddingRight: 'var(--app-container-px)' }}
+      className="relative pt-6 pb-12 overflow-x-clip px-[var(--app-container-px)]"
     >
       <div className="max-w-[var(--container-width)] mx-auto relative h-[700px] md:h-[750px] rounded-[3rem] overflow-hidden group shadow-[0_32px_80px_rgba(0,0,0,0.15)] bg-black">
         {/* Main Image with Ken Burns Effect */}

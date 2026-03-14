@@ -11,14 +11,14 @@ export default function Footer() {
 
     return (
         <footer className={styles.footer}>
-            <div className={styles.footerContainer}>
+            <div className={`${styles.footerContainer} lux-container`}>
                 {/* Brand */}
                 <div>
                     <Link href="/">
                         <img src={BRAND_LOGO} alt="Hotel Hider" className={styles.footerLogo} />
                     </Link>
                     <p className={styles.tagline}>
-                        Hotel Hider defines a new era of luxury hospitality in Mansa, Gujarat. Experience unparalleled comfort and serene elegance in every corner of our property.
+                        Hotel Hider offers comfortable and modern stays in Manesar, Gurgaon with convenient access to NH-48 and IMT Manesar.
                     </p>
                     <div className={styles.socials}>
                         <a href="https://instagram.com" target="_blank" rel="noreferrer" className={styles.socialLink} aria-label="Instagram">
@@ -55,10 +55,12 @@ export default function Footer() {
                 </div>
             </div>
 
-            <div className={styles.footerBottom}>
+            <div className={`${styles.footerBottom} lux-container`}>
                 <div className="flex flex-col gap-2">
-                    <p>&copy; 2026 Hotel Hider. Art of Hospitality.</p>
-                    {siteConfig.contact.gstNumber && <p style={{ opacity: 0.5, fontSize: '10px' }}>GST: {siteConfig.contact.gstNumber}</p>}
+                    <p>&copy; {new Date().getFullYear()} {siteConfig.hotelName}. Art of Hospitality.</p>
+                    {siteConfig.contact.gstNumber && (
+                        <p style={{ opacity: 0.5, fontSize: '10px' }}>GST: {siteConfig.contact.gstNumber}</p>
+                    )}
                 </div>
                 <div className="flex flex-col items-end gap-2 text-right">
                     <p>Check-in / Check-out: 12:00 Noon</p>

@@ -10,7 +10,7 @@ export default function Gallery() {
 
     return (
         <section id="gallery" className={styles.section}>
-            <div className="container mx-auto px-4">
+            <div className="lux-container">
                 <motion.div
                     className={styles.intro}
                     initial={{ opacity: 0, y: 20 }}

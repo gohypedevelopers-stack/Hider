@@ -11,6 +11,7 @@
   --brand-cream: #FAF9F6;
   --brand-sage: #E7ECE8; /* New Luxury Sage Green */
   --brand-forest: #2D3E3A; /* New Deep Forest Green */
+  --brand-orange: #ED6B24; /* Screenshot Brand Color */
 
   /* THEME TOKENS (Light/Luxury Minimal) */
   --app-bg: #FFFFFF;
@@ -31,15 +32,34 @@
   --glass-border: rgba(255, 255, 255, 0.2);
   --glass-blur: blur(20px);
 
-  /* Spacing */
-  --container-width: 1520px;
+  /* Spacing & Container */
+  --container-width: 1440px;
   --app-container-px: 80px;
-  --section-padding: 180px;
-  --section-padding-mobile: 120px;
+  --section-padding: 160px;
+  --section-padding-mobile: 100px;
 
   /* Typography */
-  --font-heading: var(--font-playfair), 'Playfair Display', serif;
-  --font-body: var(--font-inter), 'Inter', sans-serif;
+  --font-heading: var(--font-cormorant), 'Cormorant Garamond', serif;
+  --font-body: var(--font-outfit), 'Outfit', sans-serif;
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --app-container-px: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --app-container-px: 32px;
+    --section-padding: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --app-container-px: 24px;
+  }
 }
 
 [data-theme='dark'] {
@@ -207,12 +227,15 @@ html, body {
   -webkit-overflow-scrolling: touch;
 }
 
-/* Global Container */
-.hider-main-container {
-  width: 100% !important;
-  max-width: var(--container-width) !important;
-  margin: 0 auto !important;
-  padding: 0 var(--app-container-px) !important;
+/* Unified Luxury Container */
+.hider-main-container,
+.lux-container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--app-container-px);
+  padding-right: var(--app-container-px);
   position: relative;
 }
 

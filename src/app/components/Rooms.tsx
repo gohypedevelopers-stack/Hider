@@ -12,7 +12,7 @@ export default function Rooms() {
             slug: "standard-room",
             name: "Standard Room",
             price: "₹2,500 / Night",
-            features: "Queen Bed • Garden View • 250 sq.ft",
+            features: "Queen Bed • Modern AC • 250 sq.ft",
             image: siteConfig.images.rooms.standard
         },
         {
@@ -20,7 +20,7 @@ export default function Rooms() {
             slug: "deluxe-room",
             name: "Deluxe Room",
             price: "₹3,500 / Night",
-            features: "King Bed • City View • 350 sq.ft",
+            features: "King Bed • Spacious Layout • 350 sq.ft",
             image: siteConfig.images.rooms.deluxe
         },
         {
@@ -28,7 +28,7 @@ export default function Rooms() {
             slug: "super-deluxe-room",
             name: "Super Deluxe Room",
             price: "₹4,500 / Night",
-            features: "Suite • Grand View • 500 sq.ft",
+            features: "King Bed • Maximum Space • 500 sq.ft",
             image: siteConfig.images.rooms.family
         }
     ];
@@ -39,7 +39,7 @@ export default function Rooms() {
 
     return (
         <section id="rooms" className={styles.section}>
-            <div className="container mx-auto px-4">
+            <div className="lux-container">
                 <motion.div
                     className={styles.intro}
                     initial={{ opacity: 0, y: 30 }}
@@ -48,9 +48,9 @@ export default function Rooms() {
                     transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
                 >
                     <span className={styles.eyebrow}>Our Collection</span>
-                    <h2 className={styles.title}>Guest Accommodation</h2>
+                    <h2>Our Accommodation</h2>
                     <p>
-                        Discover a collection of refined living spaces, where every detail is curated to provide a sanctuary of calm and unparalleled comfort.
+                        Relax in our elegantly designed rooms that combine modern comfort with a peaceful atmosphere. Each room is thoughtfully equipped with essential amenities to ensure a comfortable and convenient stay.
                     </p>
                 </motion.div>
 

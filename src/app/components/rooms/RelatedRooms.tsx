@@ -11,27 +11,23 @@ interface RelatedRoomsProps {
 
 export default function RelatedRooms({ rooms }: RelatedRoomsProps) {
   return (
-    <section className="py-56 bg-[var(--app-bg-accent)]">
-      <div 
-        className="max-w-[var(--container-width)] mx-auto"
-        style={{ paddingLeft: 'var(--app-container-px)', paddingRight: 'var(--app-container-px)' }}
-      >
+    <section className="py-32 bg-[var(--app-bg-accent)]">
+      <div className="lux-container">
 
         {/* Header */}
         <motion.div
            initial={{ opacity: 0, y: 30 }}
            whileInView={{ opacity: 1, y: 0 }}
-           viewport={{ once: true, margin: "-100px" }}
-           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+           viewport={{ once: true }}
+           transition={{ duration: 1 }}
            className="text-center mb-24"
         >
-          <span className="text-[10px] font-bold uppercase tracking-[0.6em] text-[var(--brand-gold)] font-inter block mb-4">
-            Curated Stays
+          <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-[var(--brand-gold)] block mb-4">
+            Curated Selection
           </span>
-          <h2 className="text-5xl md:text-6xl font-medium font-serif text-[var(--app-text)] m-0 mb-6">
+          <h2 className="text-4xl md:text-5xl font-serif text-[var(--app-text)] italic">
             Alternative Retreats
           </h2>
-          <div className="h-px w-24 bg-gradient-to-r from-[var(--brand-gold)] to-transparent mx-auto" />
         </motion.div>
 
         {/* Cards */}

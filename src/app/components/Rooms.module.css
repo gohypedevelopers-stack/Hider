@@ -58,9 +58,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
-    max-width: 1520px;
     margin: 0 auto;
-    padding: 0 var(--app-container-px);
     position: relative;
     z-index: 1;
     justify-content: center;
@@ -224,7 +222,6 @@
 @media (max-width: 768px) {
     .grid {
         grid-template-columns: 1fr;
-        padding: 0 24px;
     }
     
     .section {

@@ -26,7 +26,7 @@ const amenities = [
 export default function Amenities() {
     return (
         <section id="amenities" className={styles.section}>
-            <div className="container mx-auto px-4">
+            <div className="lux-container">
                 <motion.div
                     className={styles.intro}
                     initial={{ opacity: 0, y: 30 }}
@@ -40,25 +40,33 @@ export default function Amenities() {
                         From seamless connectivity to personalized guest services, explore the thoughtful touches that elevate your stay at Hotel Hider.
                     </p>
                 </motion.div>
-
-                <div className={styles.grid}>
-                    {amenities.map((item, i) => (
-                        <motion.div
-                            key={item.id}
-                            className={styles.card}
-                            initial={{ opacity: 0, scale: 0.95, y: 20 }}
-                            whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                            transition={{ delay: i * 0.03, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                            viewport={{ once: true, margin: "-50px" }}
-                        >
-                            <div className={styles.iconWrapper}>
-                                <item.icon size={32} strokeWidth={1} />
-                            </div>
-                            <h3 className={styles.label}>{item.label}</h3>
-                        </motion.div>
-                    ))}
-                </div>
             </div>
+
+                <div className={styles.carouselContainer}>
+                    {/* Row 1: Scroll Left */}
+                    <div className={`${styles.carouselRow} ${styles.scrollLeft}`}>
+                        {[...amenities.slice(0, 9), ...amenities.slice(0, 9)].map((item, i) => (
+                            <div key={`row1-${item.id}-${i}`} className={styles.card}>
+                                <div className={styles.iconWrapper}>
+                                    <item.icon size={28} strokeWidth={1.5} />
+                                </div>
+                                <h3 className={styles.label}>{item.label}</h3>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Row 2: Scroll Right */}
+                    <div className={`${styles.carouselRow} ${styles.scrollRight}`}>
+                        {[...amenities.slice(9), ...amenities.slice(9)].map((item, i) => (
+                            <div key={`row2-${item.id}-${i}`} className={styles.card}>
+                                <div className={styles.iconWrapper}>
+                                    <item.icon size={28} strokeWidth={1.5} />
+                                </div>
+                                <h3 className={styles.label}>{item.label}</h3>
+                            </div>
+                        ))}
+                    </div>
+                </div>
         </section>
     );
 }

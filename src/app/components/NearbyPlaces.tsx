@@ -5,32 +5,35 @@ import styles from './NearbyPlaces.module.css';
 
 const places = [
     {
-        title: "Key Destinations",
-        icon: MapPin,
-        items: [
-            { name: "Gandhinagar (Capital City)", dist: "25 KM" },
-            { name: "Ahmedabad Business District", dist: "45 KM" },
-            { name: "GIFT City", dist: "35 KM" },
-            { name: "Akshardham Temple", dist: "28 KM" }
-        ]
-    },
-    {
-        title: "Institutions & Hubs",
+        title: "Colleges & Universities",
         icon: GraduationCap,
         items: [
-            { name: "DA-IICT Gandhinagar", dist: "26 KM" },
-            { name: "IIT Gandhinagar", dist: "30 KM" },
-            { name: "NID Ahmedabad", dist: "48 KM" },
-            { name: "Gujarat National Law University", dist: "24 KM" }
+            { name: "Starex University", dist: "Near NH-48" },
+            { name: "Gurugram University", dist: "Sector 51" },
+            { name: "Amity University Gurgaon", dist: "Pachgaon" },
+            { name: "Govt Polytechnic Manesar", dist: "IMT Manesar" },
+            { name: "Laxmi College of Education", dist: "Manesar" }
         ]
     },
     {
-        title: "Medical Facilities",
+        title: "Nearby Hospitals",
         icon: Hospital,
         items: [
-            { name: "Civil Hospital Gandhinagar", dist: "22 KM" },
-            { name: "Apollo Hospitals Ahmedabad", dist: "40 KM" },
-            { name: "Zydus Hospital", dist: "42 KM" }
+            { name: "Miracles Apollo Cradle", dist: "IMT Manesar" },
+            { name: "Artemis Lite Multispeciality", dist: "Manesar" },
+            { name: "Prakash Multispeciality", dist: "Manesar" },
+            { name: "Fortis Hospital Manesar", dist: "Sector 1" }
+        ]
+    },
+    {
+        title: "Nearby Attractions",
+        icon: MapPin,
+        items: [
+            { name: "Sultanpur Bird Sanctuary", dist: "15 KM" },
+            { name: "Ambience Mall", dist: "20 KM" },
+            { name: "Leisure Valley Park", dist: "18 KM" },
+            { name: "Cyber Hub", dist: "22 KM" },
+            { name: "Damdama Lake", dist: "25 KM" }
         ]
     }
 ];
@@ -38,7 +41,7 @@ const places = [
 export default function NearbyPlaces() {
     return (
         <section id="nearby" className={styles.section}>
-            <div className="container mx-auto px-4">
+            <div className="lux-container">
                 <motion.div 
                     className={styles.intro}
                     initial={{ opacity: 0, y: 30 }}
@@ -47,8 +50,8 @@ export default function NearbyPlaces() {
                     transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
                 >
                     <span className={styles.eyebrow}>Discovery</span>
-                    <h2>Nearby Mansa</h2>
-                    <p>Experience the finest attractions and essential hubs of Gujarat from our central location.</p>
+                    <h2>Exploring Manesar</h2>
+                    <p>Experience the finest attractions and essential hubs of Gurgaon from our central location.</p>
                 </motion.div>
 
                 <div className={styles.grid}>

@@ -23,14 +23,11 @@ export default function WelcomeHeader() {
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
                 >
-                    <span className={styles.label}>Est. 2026</span>
-                    <h2 className={styles.title}>A New Standard of Elegance</h2>
-                    <div className={styles.goldDivider} />
-                    <p className={styles.subtitle}>{siteConfig.tagline}</p>
+                    <h2 className={styles.title}>Description</h2>
                     <p className={styles.description}>
-                        Experience a relaxing and comfortable stay at Hotel Hider, conveniently located in the vibrant city of Mansa. 
+                        Experience a relaxing and comfortable stay at Hotel Hider, conveniently located near NH-48 and IMT Manesar. 
                         Our property offers spacious rooms, modern amenities, and warm hospitality for business travelers, families, 
-                        and leisure guests seeking the finest staying experience in Gujarat.
+                        and leisure guests seeking a refined stay in Gurgaon and Manesar.
                     </p>
 
                     <div className={styles.buttons}>

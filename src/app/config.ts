@@ -2,19 +2,19 @@ export const BRAND_LOGO = "/lobo.png";
 
 export const siteConfig = {
     hotelName: "Hotel Hider",
-    tagline: "Unparalleled Luxury in Mansa, Gujarat",
-    location: "Mansa, Gujarat, India",
+    tagline: "Comfort & Luxury in Manesar, Gurgaon",
+    location: "Manesar, Gurgaon, India",
     contact: {
-        phone: "+919876543210", // Placeholder
+        phone: "+919876543210", // Placeholder - Update if real number provided
         displayPhone: "+91 98765 43210",
         email: "reservations@hotelhider.com",
-        address: "Mansa, Gujarat, India",
-        mapQuery: "Mansa, Gujarat, India",
-        gstNumber: "" // Placeholder
+        address: "Near NH-48, IMT Manesar, Gurgaon, India",
+        mapQuery: "Hotel Hider Manesar Gurgaon",
+        gstNumber: "@HOTEL HIDER GM" 
     },
     whatsapp: {
-        number: "919876543210", // No plus sign for API
-        message: "Hi Hider Hotel, I want to book a room."
+        number: "919876543210", // Placeholder
+        message: "Hi Hotel Hider, I want to book a room."
     },
     images: {
         // Hero: wide-angle suite bedroom (most impressive shot)

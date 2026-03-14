@@ -42,11 +42,11 @@ export default function Hero() {
                         animate={{ opacity: 1, letterSpacing: '0.5em' }}
                         transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
                     >
-                        Mansa, Gujarat, India
+                        Manesar, Gurgaon, India
                     </motion.span>
                     
                     <h1 className={styles.title}>
-                        {"Experience Luxury at Hotel Hider".split(" ").map((word, i) => (
+                        {"Welcome to Hotel Hider".split(" ").map((word, i) => (
                             <span key={i} className={styles.wordWrapper}>
                                 <motion.span
                                     custom={i}
@@ -71,7 +71,7 @@ export default function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1, delay: 1.2, ease: [0.22, 1, 0.36, 1] }}
                     >
-                        A premium stay experience in the heart of Mansa
+                        Comfort & Luxury in Manesar, Gurgaon
                     </motion.p>
                     
                     <motion.div 
@@ -83,9 +83,14 @@ export default function Hero() {
                         <button onClick={() => scrollTo('booking')} className={styles.primaryBtn}>
                             Book Your Stay
                         </button>
-                        <button onClick={() => scrollTo('rooms')} className={styles.secondaryBtn}>
-                            Explore Rooms
-                        </button>
+                        <a 
+                            href={`https://wa.me/${siteConfig.whatsapp.number}?text=${encodeURIComponent(siteConfig.whatsapp.message)}`}
+                            target="_blank"
+                            className={styles.secondaryBtn}
+                            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }}
+                        >
+                            WhatsApp Us
+                        </a>
                     </motion.div>
                 </div>
             </div>
