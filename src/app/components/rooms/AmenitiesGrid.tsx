@@ -54,16 +54,18 @@ export default function AmenitiesGrid({ amenities }: AmenitiesGridProps) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className="mb-12"
+        className="mb-20"
       >
         <h2 className="text-4xl font-serif text-[var(--app-text)] m-0 flex items-center gap-4">
-          <CheckCircle className="text-[#E95D1D]" size={28} strokeWidth={1.5} />
-          Room Amenities
+          <div className="w-12 h-12 rounded-full bg-[var(--brand-gold)]/10 flex items-center justify-center">
+            <CheckCircle className="text-[var(--brand-gold)]" size={24} strokeWidth={1.5} />
+          </div>
+          Curated Amenities
         </h2>
       </motion.div>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {amenities.slice(0, 6).map((item, index) => {
           const Icon = getIcon(item.name);
           return (
@@ -74,12 +76,12 @@ export default function AmenitiesGrid({ amenities }: AmenitiesGridProps) {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="flex items-center gap-4 bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all group"
+              className="flex items-center gap-5 bg-white border border-[var(--app-border)] p-6 rounded-[2rem] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.05)] transition-all duration-500 group"
             >
-              <div className="w-12 h-12 rounded-xl bg-gray-50 flex items-center justify-center group-hover:bg-[#E95D1D]/10 transition-colors">
-                <Icon size={20} className="text-[#E95D1D]" strokeWidth={1.5} />
+              <div className="w-14 h-14 rounded-2xl bg-[var(--app-bg-accent)] flex items-center justify-center group-hover:bg-[var(--brand-gold)] transition-all duration-500 shadow-inner">
+                <Icon size={24} className="text-[var(--brand-gold)] group-hover:text-white transition-colors duration-500" strokeWidth={1.2} />
               </div>
-              <span className="text-sm font-medium text-gray-700">
+              <span className="text-base font-serif text-[var(--app-text)] font-medium italic">
                 {item.name}
               </span>
             </motion.div>

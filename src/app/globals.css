@@ -3,6 +3,7 @@
 :root {
   /* ULTRA-LUXURY BRAND TOKENS */
   --brand-gold: #C8A96A; /* Metallic Gold */
+  --brand-gold-rgb: 200, 169, 106;
   --brand-gold-soft: #D4BD8A;
   --brand-gold-hover: #AB8E55;
   --brand-charcoal: #111111;
@@ -32,9 +33,9 @@
 
   /* Spacing */
   --container-width: 1520px;
-  --app-container-px: 64px;
-  --section-padding: 160px;
-  --section-padding-mobile: 100px;
+  --app-container-px: 80px;
+  --section-padding: 180px;
+  --section-padding-mobile: 120px;
 
   /* Typography */
   --font-heading: var(--font-playfair), 'Playfair Display', serif;

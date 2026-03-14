@@ -59,26 +59,35 @@ export default function Rooms() {
                         <motion.div
                             key={room.id}
                             className={styles.card}
-                            initial={{ opacity: 0, y: 40 }}
+                            initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ 
-                                delay: index * 0.15, 
-                                duration: 1, 
+                                delay: index * 0.2, 
+                                duration: 1.2, 
                                 ease: [0.22, 1, 0.36, 1] 
                             }}
-                            viewport={{ once: true, margin: "-100px" }}
+                            viewport={{ once: true, margin: "-50px" }}
                         >
-                            <div className={styles.imageContainer}>
-                                <img src={room.image} alt={room.name} className={styles.image} />
+                            <div className={styles.imageOuter}>
+                                <div className={styles.imageContainer}>
+                                    <img src={room.image} alt={room.name} className={styles.image} />
+                                </div>
                             </div>
 
                             <div className={styles.content}>
-                                <h3 className={styles.roomTitle}>{room.name}</h3>
-                                <p className={styles.desc}>{room.features}</p>
-                                <div className={styles.price}>{room.price}</div>
-                                <Link href={`/rooms/${room.slug}`} className={styles.btn}>
-                                    VIEW ROOM
-                                </Link>
+                                <div className={styles.contentTop}>
+                                    <h3 className={styles.roomTitle}>{room.name}</h3>
+                                    <p className={styles.desc}>{room.features}</p>
+                                </div>
+                                
+                                <div className={styles.contentBottom}>
+                                    <div className={styles.price}>
+                                        {room.price.split(' / ')[0]} <span>/ {room.price.split(' / ')[1]}</span>
+                                    </div>
+                                    <Link href={`/rooms/${room.slug}`} className={styles.btn}>
+                                        Explore Room
+                                    </Link>
+                                </div>
                             </div>
                         </motion.div>
                     ))}

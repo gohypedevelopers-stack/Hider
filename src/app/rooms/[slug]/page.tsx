@@ -8,6 +8,9 @@ import AmenitiesGrid from '../../components/rooms/AmenitiesGrid';
 import RelatedRooms from '../../components/rooms/RelatedRooms';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import RoomMainContent from '../../components/rooms/RoomMainContent';
+import HotelDetailsContent from '../../components/rooms/HotelDetailsContent';
+import RoomBookingWrapper from '../../components/rooms/RoomBookingWrapper';
 import { siteConfig } from '../../config';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
@@ -55,17 +58,7 @@ export default async function RoomPage({ params }: PageProps) {
         tagline={room.tagline}
       />
 
-      <div 
-        className="hider-main-container mx-auto pb-64"
-        style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'minmax(0, 1fr) 420px', 
-          gap: '100px',
-          paddingTop: '160px',
-          alignItems: 'start',
-          width: '100%'
-        }}
-      >
+      <RoomMainContent>
         
         {/* Main Narrative Column */}
         <div className="flex flex-col gap-[160px]">
@@ -88,7 +81,6 @@ export default async function RoomPage({ params }: PageProps) {
 
         </div>
 
-        {/* Sidebar Area for Booking Card */}
         <aside style={{ 
           position: 'sticky', 
           top: '140px', 
@@ -96,19 +88,87 @@ export default async function RoomPage({ params }: PageProps) {
           width: '100%',
           zIndex: 40 
         }}>
-          <RoomBookingCard 
-            price={room.price}
-            roomType={room.title}
-            guests={room.guests}
-          />
-          <SpecialOffer />
+          <RoomBookingWrapper>
+            <RoomBookingCard 
+              price={room.price}
+              roomType={room.title}
+              guests={room.guests}
+            />
+            <div className="mt-12 mb-4 p-4 rounded-[2.5rem] border border-[var(--brand-gold)]/30 shadow-[0_20px_50px_rgba(0,0,0,0.05)] bg-[var(--app-bg-accent)]/50 backdrop-blur-md relative overflow-hidden group">
+              <div className="absolute top-0 left-0 w-1 h-full bg-[var(--brand-gold)]" />
+              <div className="mb-4 flex items-center justify-between">
+                <span className="inline-block text-[10px] font-bold uppercase tracking-[0.3em] text-[var(--brand-gold)] bg-white px-5 py-2 rounded-full shadow-sm">Special Privilege</span>
+              </div>
+              <SpecialOffer />
+            </div>
+          </RoomBookingWrapper>
         </aside>
 
-      </div>
+      </RoomMainContent>
 
       {/* Related Rooms Selection */}
       <RelatedRooms rooms={otherRooms} />
-      
+
+      {/* Hotel-wide Details Section */}
+      <section className="bg-[var(--app-bg-accent)] py-32 mt-32 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--brand-gold)]/5 rounded-full blur-3xl -mr-48 -mt-48" />
+        <div className="hider-main-container mx-auto">
+          <HotelDetailsContent>
+            <div>
+              <h2 className="text-5xl font-serif mb-12 text-[var(--app-text)] italic">Complete Services</h2>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {[
+                  "Free WiFi", "Parking", "AC Rooms", "Room Service", 
+                  "24/7 Front Desk", "CCTV Security", "Breakfast Included", 
+                  "Laundry Service", "Power Backup", "Elevator", 
+                  "Hot and Cold water", "Iron with Boards", "Hot water kettle",
+                  "Pick and drop service (Chargeable)", "Wake up call", 
+                  "Housekeeping", "Child friendly", "etc."
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-4 text-lg text-[var(--app-text-muted)] font-serif italic">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[var(--brand-gold)]" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            <div className="flex flex-col gap-16">
+              <div>
+                <h3 className="text-xs uppercase tracking-[0.4em] text-[var(--brand-gold)] font-bold mb-6">Arrival & Departure</h3>
+                <p className="text-3xl font-serif text-[var(--app-text)] italic">12:00 Noon</p>
+                <div className="h-px w-32 bg-[var(--brand-gold)]/30 mt-6" />
+              </div>
+
+              <div>
+                <h3 className="text-xs uppercase tracking-[0.4em] text-[var(--brand-gold)] font-bold mb-6">Price Range</h3>
+                <ul className="flex flex-col gap-4">
+                  <li className="text-2xl font-serif text-[var(--app-text)] italic flex justify-between border-b border-[var(--app-border)] pb-4">
+                    <span>Standard</span>
+                    <span className="text-[var(--brand-gold)]">₹2,500</span>
+                  </li>
+                  <li className="text-2xl font-serif text-[var(--app-text)] italic flex justify-between border-b border-[var(--app-border)] pb-4">
+                    <span>Deluxe</span>
+                    <span className="text-[var(--brand-gold)]">₹3,500</span>
+                  </li>
+                  <li className="text-2xl font-serif text-[var(--app-text)] italic flex justify-between border-b border-[var(--app-border)] pb-4">
+                    <span>Super Deluxe</span>
+                    <span className="text-[var(--brand-gold)]">₹4,500</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-xs uppercase tracking-[0.4em] text-[var(--brand-gold)] font-bold mb-6">Registration</h3>
+                <p className="text-2xl font-serif text-[var(--app-text)] italic bg-white/50 backdrop-blur-sm p-8 rounded-[2rem] border border-[var(--app-border)] inline-block">
+                  GST: <span className="font-mono not-italic text-[var(--brand-gold)] ml-4">@HOTEL HIDER GM</span>
+                </p>
+              </div>
+            </div>
+          </HotelDetailsContent>
+        </div>
+      </section>
+
       <Footer />
     </main>
   );

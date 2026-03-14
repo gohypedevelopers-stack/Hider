@@ -10,61 +10,59 @@ interface RoomBookingCardProps {
 
 export default function RoomBookingCard({ price, roomType, guests }: RoomBookingCardProps) {
   return (
-    <div className="bg-white rounded-[2rem] p-8 shadow-xl border border-gray-100 flex flex-col gap-8 w-full">
+    <div className="bg-white/95 backdrop-blur-2xl rounded-[3rem] p-10 shadow-[0_32px_100px_rgba(0,0,0,0.12)] border border-white flex flex-col gap-10 w-full relative overflow-hidden">
+      {/* Decorative element */}
+      <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--brand-gold)]/5 rounded-full -translate-y-16 translate-x-16 blur-3xl" />
       
-      {/* Price Header */}
-      <div className="flex flex-col gap-2">
-        <span className="text-[10px] font-bold text-[#E95D1D] uppercase tracking-[0.2em]">
-          Pricing Starts From
+      <div className="flex flex-col gap-3">
+        <span className="text-[10px] font-bold text-[var(--brand-gold)] uppercase tracking-[0.4em]">
+          Bespoke Selection
         </span>
         <div className="flex items-baseline gap-2">
-          <span className="text-3xl font-bold text-[#111111]">INR {price}</span>
-          <span className="text-sm text-gray-400 font-medium">/ night</span>
+          <span className="text-5xl font-serif text-[var(--app-text)] font-semibold tracking-tight">₹{price}</span>
+          <span className="text-sm text-[var(--app-text-muted)] font-medium italic">/ night</span>
         </div>
       </div>
 
-      {/* Booking Form Inputs */}
       <div className="flex flex-col gap-4">
-        <div className="p-5 rounded-2xl bg-gray-50 border border-gray-100 flex justify-between items-center group hover:border-[#E95D1D]/30 transition-colors cursor-pointer">
-          <div className="flex flex-col gap-1">
-            <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Check-in - Check-out</span>
-            <span className="text-xs font-semibold text-gray-700">Aug 24 - Aug 28, 2024</span>
+        <div className="p-6 rounded-3xl bg-white border border-[var(--app-border)] shadow-sm flex justify-between items-center group hover:border-[var(--brand-gold)] transition-all cursor-pointer">
+          <div className="flex flex-col gap-1.5">
+            <span className="text-[10px] font-bold text-[var(--app-text-muted)] uppercase tracking-widest opacity-80">Check-in — Check-out</span>
+            <span className="text-base font-serif text-[var(--app-text)] font-bold italic">Aug 24 — Aug 28, 2024</span>
           </div>
-          <Calendar size={18} className="text-[#E95D1D]" />
+          <Calendar size={22} className="text-[var(--brand-gold)]" strokeWidth={2} />
         </div>
 
-        <div className="p-5 rounded-2xl bg-gray-50 border border-gray-100 flex justify-between items-center group hover:border-[#E95D1D]/30 transition-colors cursor-pointer">
-          <div className="flex flex-col gap-1">
-            <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Guests</span>
-            <span className="text-xs font-semibold text-gray-700">2 Adults, 1 Child</span>
+        <div className="p-6 rounded-3xl bg-white border border-[var(--app-border)] shadow-sm flex justify-between items-center group hover:border-[var(--brand-gold)] transition-all cursor-pointer">
+          <div className="flex flex-col gap-1.5">
+            <span className="text-[10px] font-bold text-[var(--app-text-muted)] uppercase tracking-widest opacity-80">Guests</span>
+            <span className="text-base font-serif text-[var(--app-text)] font-bold italic">2 Adults, 1 Child</span>
           </div>
-          <Users size={18} className="text-[#E95D1D]" />
+          <Users size={22} className="text-[var(--brand-gold)]" strokeWidth={2} />
         </div>
       </div>
 
-      {/* Cost Breakdown */}
-      <div className="flex flex-col gap-4 pt-4 border-t border-gray-50">
-        <div className="flex justify-between text-xs">
-          <span className="text-gray-400 font-medium">INR {price} x 4 nights</span>
-          <span className="text-gray-700 font-bold">INR 18,000</span>
+      <div className="flex flex-col gap-5 pt-8 border-t border-[var(--app-border)]">
+        <div className="flex justify-between text-base">
+          <span className="text-[var(--app-text-muted)] font-medium italic font-serif px-1">INR {price} x 4 nights</span>
+          <span className="text-[var(--app-text)] font-bold">INR 18,000</span>
         </div>
-        <div className="flex justify-between text-xs">
-          <span className="text-gray-400 font-medium">Service Fee</span>
-          <span className="text-gray-700 font-bold">INR 450</span>
+        <div className="flex justify-between text-base">
+          <span className="text-[var(--app-text-muted)] font-medium italic font-serif px-1">Service Fee</span>
+          <span className="text-[var(--app-text)] font-bold">INR 450</span>
         </div>
-        <div className="flex justify-between items-center mt-2">
-          <span className="text-base font-bold text-gray-800">Total</span>
-          <span className="text-base font-bold text-gray-800">INR 18,450</span>
+        <div className="flex justify-between items-center mt-3 bg-white border border-[var(--app-border)] p-6 rounded-3xl shadow-sm">
+          <span className="text-xl font-bold text-[var(--app-text)] font-serif italic">Total</span>
+          <span className="text-2xl font-bold text-[var(--brand-gold)] font-serif">INR 18,450</span>
         </div>
       </div>
 
-      {/* Call to Action */}
-      <div className="flex flex-col gap-4">
-        <button className="w-full bg-[#E95D1D] hover:bg-[#D44D14] text-white font-bold py-5 rounded-2xl transition-all shadow-lg shadow-[#E95D1D]/20 active:scale-[0.98]">
+      <div className="flex flex-col gap-5">
+        <button className="w-full bg-[var(--brand-gold)] hover:bg-[#B69659] text-white font-bold py-6 rounded-3xl transition-all shadow-[0_20px_40px_rgba(200,169,106,0.25)] hover:shadow-none hover:translate-y-1 active:scale-[0.98] text-sm uppercase tracking-widest">
           Reserve Your Stay
         </button>
-        <p className="text-[10px] text-center text-gray-400 font-medium px-4">
-          Free cancellation until 48h before check-in
+        <p className="text-xs text-center text-[var(--app-text-muted)] font-bold px-4 tracking-wider opacity-90">
+          Complimentary cancellation until 48h prior
         </p>
       </div>
     </div>

@@ -14,14 +14,16 @@ export default function AboutUs() {
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
                 >
-                    <Image
-                        src="/1.jpeg"
-                        alt="Hotel Hider – Manesar, Gurgaon"
-                        fill
-                        sizes="(max-width: 900px) 100vw, 50vw"
-                        style={{ objectFit: 'cover' }}
-                        priority
-                    />
+                    <div className={styles.imageInner}>
+                        <Image
+                            src="/1.jpeg"
+                            alt="Hotel Hider – Manesar, Gurgaon"
+                            fill
+                            sizes="(max-width: 900px) 100vw, 50vw"
+                            style={{ objectFit: 'cover' }}
+                            priority
+                        />
+                    </div>
                 </motion.div>
 
                 <motion.div
@@ -46,15 +48,30 @@ export default function AboutUs() {
 
                     <div className={styles.highlights}>
                         <div className={styles.highlight}>
-                            <span className={styles.stats}>03</span>
+                            <motion.span 
+                                className={styles.stats}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8, delay: 0.4 }}
+                            >03</motion.span>
                             <span className={styles.statLabel}>Expansive Floors</span>
                         </div>
                         <div className={styles.highlight}>
-                            <span className={styles.stats}>17+</span>
+                            <motion.span 
+                                className={styles.stats}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8, delay: 0.5 }}
+                            >17+</motion.span>
                             <span className={styles.statLabel}>Luxury Rooms</span>
                         </div>
                         <div className={styles.highlight}>
-                            <span className={styles.stats}>24/7</span>
+                            <motion.span 
+                                className={styles.stats}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8, delay: 0.6 }}
+                            >24/7</motion.span>
                             <span className={styles.statLabel}>Bespoke Service</span>
                         </div>
                     </div>
