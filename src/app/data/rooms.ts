@@ -34,6 +34,11 @@ export type RoomData = {
   highlights: RoomHighlight[];
   policies: RoomPolicy[];
   galleryImages: string[];
+  location?: {
+    description: string;
+    airport: string;
+    city: string;
+  };
 };
 
 export const commonAmenities: RoomAmenity[] = [
@@ -111,13 +116,18 @@ export const roomsData: RoomData[] = [
       { title: "Daily Housekeeping", description: "Room cleaned and refreshed daily for your comfort and convenience.", icon: "Sparkles" }
     ],
     policies: commonPolicies,
-    galleryImages: ["/1.jpeg", "/4.jpeg", "/7.jpeg", "/5.jpeg"]
+    galleryImages: ["/1.jpeg", "/4.jpeg", "/7.jpeg", "/5.jpeg"],
+    location: {
+      description: "Conveniently situated in Manesar, our Standard rooms offer a peaceful retreat while being minutes away from major corporate hubs and transport links.",
+      airport: "35 mins (22 km)",
+      city: "15 mins (6 km)"
+    }
   },
   {
     slug: "deluxe-room",
     title: "Deluxe Room",
-    tagline: "Spacious luxury with premium comfort",
-    price: "3,500",
+    tagline: "A sanctuary of style and comfort designed for the modern traveler.",
+    price: "4,500",
     bed: "King Size Bed",
     guests: "2 to 3 Guests",
     size: "400 sq. ft",
@@ -146,7 +156,12 @@ export const roomsData: RoomData[] = [
       { title: "Indulgent Bath", description: "Premium fixtures for a spa-like feel.", icon: "Bath" }
     ],
     policies: commonPolicies,
-    galleryImages: ["/2.jpeg", "/6.jpeg", "/3.jpeg", "/5.jpeg"]
+    galleryImages: ["/2.jpeg", "/6.jpeg", "/3.jpeg", "/5.jpeg"],
+    location: {
+      description: "Our Deluxe rooms offer a perfect balance of luxury and accessibility, placed at the heart of Mansa's cultural and business district.",
+      airport: "25 mins (15 km)",
+      city: "10 mins (4 km)"
+    }
   },
   {
     slug: "super-deluxe-room",
@@ -181,6 +196,11 @@ export const roomsData: RoomData[] = [
       { title: "Full Amenities", description: "Everything you need for a premium stay.", icon: "CheckCircle" }
     ],
     policies: commonPolicies,
-    galleryImages: ["/8.jpeg", "/9.jpeg", "/3.jpeg", "/6.jpeg"]
+    galleryImages: ["/8.jpeg", "/9.jpeg", "/3.jpeg", "/6.jpeg"],
+    location: {
+      description: "The Super Deluxe experience is complemented by its prime positioning, offering breathtaking city views and unmatched proximity to elite dining and premium shopping.",
+      airport: "20 mins (12 km)",
+      city: "5 mins (2 km)"
+    }
   }
 ];

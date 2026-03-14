@@ -50,8 +50,9 @@ export default async function RoomPage({ params }: PageProps) {
       
       <RoomHero 
         title={room.title} 
-        image={room.galleryImages[0]}
+        images={room.galleryImages}
         price={room.price} 
+        tagline={room.tagline}
       />
 
       <div 
@@ -67,13 +68,14 @@ export default async function RoomPage({ params }: PageProps) {
       >
         
         {/* Main Narrative Column */}
-        <div className="flex flex-col gap-[200px]">
+        <div className="flex flex-col gap-[160px]">
           
           {/* Room Experience */}
           <RoomExperience 
             title={room.title}
             description={room.description}
             features={room.features}
+            price={room.price}
           />
 
           {/* Amenities Grid */}
@@ -81,6 +83,8 @@ export default async function RoomPage({ params }: PageProps) {
 
           {/* Room Gallery */}
           <RoomGallery images={room.galleryImages} />
+
+
 
         </div>
 

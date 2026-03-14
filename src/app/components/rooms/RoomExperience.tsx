@@ -5,6 +5,7 @@ interface RoomExperienceProps {
   title: string;
   description: string;
   features?: string[];
+  price?: string;
 }
 
 const containerVariants = {
@@ -17,22 +18,25 @@ const itemVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
-export default function RoomExperience({ title, description, features }: RoomExperienceProps) {
+export default function RoomExperience({ title, description, features, price }: RoomExperienceProps) {
   return (
     <section className="relative">
       {/* Section Header */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-        className="flex items-center gap-6 mb-12"
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        className="mb-12 flex flex-wrap justify-between items-baseline gap-4"
       >
-        <div className="flex flex-col gap-2">
-          <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-[var(--brand-gold)] font-inter">Art of Living</span>
-          <h2 className="text-4xl font-medium font-serif text-[var(--app-text)] m-0 leading-tight">The Experience</h2>
-        </div>
-        <div className="flex-1 h-px bg-gradient-to-r from-[var(--brand-gold)]/20 to-transparent ml-6" />
+        <h2 className="text-4xl font-serif text-[var(--app-text)] m-0">The Experience</h2>
+        {price && (
+          <div className="text-[#E95D1D] font-bold text-lg">
+            <span className="text-xs uppercase tracking-widest text-[#E95D1D]/70 mr-2">INR</span>
+            {price}
+            <span className="text-xs text-[var(--app-text-muted)] font-normal ml-1"> / Night</span>
+          </div>
+        )}
       </motion.div>
 
       {/* Description */}
