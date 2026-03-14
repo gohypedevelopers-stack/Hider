@@ -132,6 +132,31 @@
     }
 }
 
+:global([data-theme='dark']) .container {
+    background: #1A1A1A;
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+:global([data-theme='dark']) .label,
+:global([data-theme='dark']) .iconWrapper {
+    color: var(--brand-gold);
+}
+
+:global([data-theme='dark']) .input,
+:global([data-theme='dark']) .select,
+:global([data-theme='dark']) .chevron {
+    color: #FFFFFF;
+}
+
+:global([data-theme='dark']) .divider {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+:global([data-theme='dark']) .field:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
 @media (max-width: 768px) {
     .field {
         flex: 1 0 100%;

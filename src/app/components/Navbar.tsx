@@ -60,7 +60,7 @@ export default function Navbar() {
 
                 <div className={styles.navRight}>
                     <button onClick={toggleTheme} className={styles.themeToggle} aria-label="Toggle Theme">
-                        {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+                        {theme === 'light' ? <Sun size={20} /> : <Moon size={20} />}
                     </button>
                     
                     {/* Desktop Action */}
