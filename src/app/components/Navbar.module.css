@@ -209,20 +209,44 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 32px;
+        gap: 24px;
+        width: 100%;
+        padding: 0 40px;
     }
 
     .mobileLink {
         font-family: var(--font-body);
-        font-size: 24px;
+        font-size: 14px;
         font-weight: 700;
         text-transform: uppercase;
-        letter-spacing: 0.25em;
+        letter-spacing: 0.3em;
         color: var(--nav-text) !important;
         transition: all 0.4s ease;
+        padding: 8px;
     }
 
     .mobileLink:hover {
+        color: var(--brand-gold) !important;
+    }
+
+    .mobileBookBtn {
+        margin-top: 16px;
+        width: 100%;
+        max-width: 320px;
+        background: var(--brand-gold);
+        color: #FFFFFF;
+        padding: 20px 0;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 13px;
+        letter-spacing: 0.3em;
+        border: 1px solid var(--brand-gold);
+        transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+        box-shadow: 0 10px 40px rgba(197, 160, 89, 0.3);
+    }
+
+    .mobileBookBtn:hover {
+        background: transparent;
         color: var(--brand-gold);
     }
 }

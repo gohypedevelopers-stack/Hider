@@ -102,7 +102,7 @@ export default function Navbar() {
                                 <button onClick={() => scrollTo('gallery')} className={styles.mobileLink}>Gallery</button>
                                 <button onClick={() => scrollTo('nearby')} className={styles.mobileLink}>Nearby</button>
                                 <button onClick={() => scrollTo('contact')} className={styles.mobileLink}>Contact</button>
-                                <button onClick={() => scrollTo('booking')} className={styles.bookBtn} style={{ marginTop: '40px' }}>Book Now</button>
+                                <button onClick={() => scrollTo('booking')} className={styles.mobileBookBtn}>Book Now</button>
                             </div>
                         </motion.div>
                     )}
