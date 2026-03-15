@@ -11,7 +11,7 @@ interface RelatedRoomsProps {
 
 export default function RelatedRooms({ rooms }: RelatedRoomsProps) {
   return (
-    <section className="py-40 md:py-56 bg-[var(--app-bg-accent)] overflow-hidden">
+    <section className="pt-32 pb-40 md:pt-48 md:pb-56 mt-24 md:mt-32 bg-[var(--app-bg-accent)] overflow-hidden">
       <div className="lux-container">
 
         {/* Header */}

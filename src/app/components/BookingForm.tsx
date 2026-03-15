@@ -51,7 +51,7 @@ Message: ${formData.message}`;
                     transition={{ duration: 0.8 }}
                 >
                     <span className={styles.eyebrow}>Reservations</span>
-                    <h2>Book Your Collection</h2>
+                    <h2>Book Your Stay</h2>
                     <p>Experience the finest hospitality in Manesar. Our dedicated team is ready to assist you.</p>
                 </motion.div>
 

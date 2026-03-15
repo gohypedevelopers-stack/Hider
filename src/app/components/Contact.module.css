@@ -1,6 +1,6 @@
 .section {
     padding: var(--section-padding) 0;
-    background: #FFFFFF;
+    background: var(--app-bg);
 }
 
 .eyebrow {
@@ -16,7 +16,7 @@
 .intro h2 {
     font-family: var(--font-heading);
     font-size: clamp(32px, 5vw, 56px);
-    color: var(--brand-charcoal);
+    color: var(--app-text);
     margin-bottom: 48px;
     font-weight: 500;
 }
@@ -44,7 +44,8 @@
 .infoItem p, .infoItem a {
     font-size: 16px;
     line-height: 1.8;
-    color: var(--app-text-muted);
+    color: var(--app-text);
+    opacity: 0.85;
     font-weight: 300;
     text-decoration: none;
     transition: color 0.4s;
@@ -52,6 +53,7 @@
 
 .infoItem a:hover {
     color: var(--brand-gold);
+    opacity: 1;
 }
 
 .mapContainer {
@@ -77,8 +79,8 @@
 .btn {
     display: inline-block;
     padding: 18px 36px;
-    background: var(--brand-charcoal);
-    color: #FFFFFF;
+    background: var(--app-text);
+    color: var(--app-bg);
     font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
@@ -90,6 +92,7 @@
 .btn:hover {
     background: var(--brand-gold);
     border-color: var(--brand-gold);
+    color: #FFFFFF;
 }
 
 @media (max-width: 900px) {

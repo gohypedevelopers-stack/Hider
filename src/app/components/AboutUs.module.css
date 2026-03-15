@@ -157,7 +157,7 @@
 .stats {
     display: block;
     font-family: var(--font-heading);
-    font-size: 48px;
+    font-size: clamp(32px, 8vw, 48px);
     color: var(--brand-gold);
     line-height: 1;
     font-weight: 500;

@@ -230,6 +230,14 @@
     }
 }
 
+@media (max-width: 600px) {
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+}
+
 [data-theme='dark'] .card {
     background: #1A1A1A !important;
     border-color: rgba(255,255,255,0.05) !important;

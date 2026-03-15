@@ -14,7 +14,7 @@ export default function RoomGallery({ images }: RoomGalleryProps) {
   const displayImages = images.slice(0, 4);
 
   return (
-    <section className="relative w-full">
+    <section className="relative w-full mb-24 md:mb-40">
       <div className="flex flex-col items-center justify-center text-center mt-32 md:mt-40 mb-16 w-full max-w-6xl mx-auto">
         <span className="text-[11px] md:text-[13px] font-bold uppercase tracking-[0.4em] text-[var(--brand-gold)] mb-6 block">
           Visual Tour

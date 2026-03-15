@@ -96,6 +96,10 @@
     .section {
         padding: 100px 0;
     }
+
+    .container {
+        padding: 0 24px;
+    }
     
     .buttons {
         flex-direction: column;
