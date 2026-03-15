@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, User, Sun, Moon } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
+import { usePathname, useRouter } from 'next/navigation';
 import styles from './Navbar.module.css';
 import { BRAND_LOGO } from '../config';
 
@@ -9,6 +10,8 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [theme, setTheme] = useState('light');
     const [scrolled, setScrolled] = useState(false);
+    const pathname = usePathname();
+    const router = useRouter();
 
     useEffect(() => {
         const savedTheme = localStorage.getItem('theme') || 'light';
@@ -32,7 +35,15 @@ export default function Navbar() {
 
     const scrollTo = (id: string) => {
         setIsOpen(false);
-        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+        if (pathname === '/') {
+            const elm = document.getElementById(id);
+            if (elm) {
+                const y = elm.getBoundingClientRect().top + window.scrollY - 100;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+            }
+        } else {
+            window.location.href = `/#${id}`;
+        }
     };
 
     return (

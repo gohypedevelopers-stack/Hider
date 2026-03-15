@@ -1,12 +1,20 @@
 "use client";
 import Link from 'next/link';
 import { Facebook, Instagram, MessageCircle } from 'lucide-react';
+import { usePathname, useRouter } from 'next/navigation';
 import { siteConfig, BRAND_LOGO } from '../config';
 import styles from './Footer.module.css';
 
 export default function Footer() {
+    const pathname = usePathname();
+    const router = useRouter();
+
     const scrollTo = (id: string) => {
-        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+        if (pathname === '/') {
+            document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            router.push(`/#${id}`);
+        }
     };
 
     return (

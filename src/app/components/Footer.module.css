@@ -86,7 +86,7 @@
 }
 
 .footerLink:hover {
-    color: #FFFFFF;
+    color: var(--brand-gold);
 }
 
 .footerLink:hover::after {

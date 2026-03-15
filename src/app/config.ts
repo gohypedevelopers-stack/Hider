@@ -5,15 +5,15 @@ export const siteConfig = {
     tagline: "Comfort & Luxury in Manesar, Gurgaon",
     location: "Manesar, Gurgaon, India",
     contact: {
-        phone: "+919876543210", // Placeholder - Update if real number provided
-        displayPhone: "+91 98765 43210",
-        email: "reservations@hotelhider.com",
+        phone: "+919289416262",
+        displayPhone: "+91 92894 16262",
+        email: "hotelhider@gmail.com",
         address: "Near NH-48, IMT Manesar, Gurgaon, India",
         mapQuery: "Hotel Hider Manesar Gurgaon",
         gstNumber: "@HOTEL HIDER GM" 
     },
     whatsapp: {
-        number: "919876543210", // Placeholder
+        number: "919289416262",
         message: "Hi Hotel Hider, I want to book a room."
     },
     images: {

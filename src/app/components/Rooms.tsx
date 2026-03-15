@@ -39,20 +39,30 @@ export default function Rooms() {
 
     return (
         <section id="rooms" className={styles.section}>
-            <div className="lux-container">
-                <motion.div
-                    className={styles.intro}
+            <div className="lux-container relative">
+                <div className="w-full flex flex-col items-center justify-center">
+                    <motion.div
+                        className="flex flex-col items-center text-center w-full max-w-4xl mb-20 md:mb-32"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
                 >
-                    <span className={styles.eyebrow}>Our Collection</span>
-                    <h2>Our Accommodation</h2>
-                    <p>
+                    <span className="text-[11px] md:text-[13px] font-bold uppercase tracking-[0.4em] text-[var(--brand-gold)] mb-6 block text-center">
+                        Our Collection
+                    </span>
+                    <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif text-[var(--app-text)] mb-8 text-center text-center">
+                        Our Accommodation
+                    </h2>
+                    
+                    {/* Decorative Divider */}
+                    <div className="h-16 w-px bg-gradient-to-b from-transparent via-[var(--brand-gold)] to-transparent mb-10 opacity-70"></div>
+                    
+                    <p className="text-lg md:text-xl text-[var(--app-text-muted)] font-light leading-relaxed md:leading-[1.8] max-w-2xl text-center italic font-serif">
                         Relax in our elegantly designed rooms that combine modern comfort with a peaceful atmosphere. Each room is thoughtfully equipped with essential amenities to ensure a comfortable and convenient stay.
                     </p>
-                </motion.div>
+                    </motion.div>
+                </div>
 
                 <div className={styles.grid}>
                     {rooms.map((room, index) => (
@@ -68,24 +78,32 @@ export default function Rooms() {
                             }}
                             viewport={{ once: true, margin: "-50px" }}
                         >
-                            <div className={styles.imageOuter}>
-                                <div className={styles.imageContainer}>
-                                    <img src={room.image} alt={room.name} className={styles.image} />
-                                </div>
+                            <div className={styles.imageContainer}>
+                                <div className={styles.badge}>Signature Stay</div>
+                                <img src={room.image} alt={room.name} className={styles.image} />
                             </div>
 
                             <div className={styles.content}>
-                                <div className={styles.contentTop}>
-                                    <h3 className={styles.roomTitle}>{room.name}</h3>
-                                    <p className={styles.desc}>{room.features}</p>
+                                <div>
+                                    <div className={styles.header}>
+                                        <span className={styles.roomType}>Luxury Suite</span>
+                                        <h3 className={styles.roomTitle}>{room.name}</h3>
+                                    </div>
+                                    <p style={{ color: 'var(--app-text-muted)', fontSize: '14px', marginBottom: '24px', lineHeight: '1.6' }}>
+                                        {room.features}
+                                    </p>
                                 </div>
                                 
-                                <div className={styles.contentBottom}>
-                                    <div className={styles.price}>
-                                        {room.price.split(' / ')[0]} <span>/ {room.price.split(' / ')[1]}</span>
+                                <div className={styles.footer}>
+                                    <div className={styles.priceInfo}>
+                                        <span className={styles.priceLabel}>Starting From</span>
+                                        <div>
+                                            <span className={styles.price}>{room.price.split(' / ')[0]}</span>
+                                            <span className={styles.priceUnit}>/ {room.price.split(' / ')[1]}</span>
+                                        </div>
                                     </div>
                                     <Link href={`/rooms/${room.slug}`} className={styles.btn}>
-                                        Explore Room
+                                        Explore
                                     </Link>
                                 </div>
                             </div>

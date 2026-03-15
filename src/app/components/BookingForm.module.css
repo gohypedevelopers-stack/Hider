@@ -1,6 +1,7 @@
 .section {
     padding: var(--section-padding) 0;
     background: var(--app-bg);
+    scroll-margin-top: 120px;
 }
 
 .intro {
@@ -22,9 +23,11 @@
 .formContainer {
     max-width: 1000px;
     margin: 0 auto;
-    background: var(--app-bg-accent);
+    background: var(--card-bg);
     padding: 80px;
-    box-shadow: var(--card-shadow);
+    border-radius: 32px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08); /* Deeper luxury shadow */
+    border: 1px solid var(--app-border);
 }
 
 .formGrid {
@@ -49,15 +52,15 @@
 
 .input, .select, .textarea {
     width: 100%;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid var(--app-border);
-    padding: 12px 0;
-    font-size: 16px;
-    font-weight: 400;
+    background: rgba(128, 128, 128, 0.04); /* Soft premium field background */
+    border: 1px solid var(--app-border);
+    border-radius: 16px;
+    padding: 18px 24px;
+    font-size: 15px;
+    font-weight: 500;
     color: var(--app-text);
     outline: none;
-    transition: all 0.4s ease;
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
     font-family: var(--font-body);
 }
 
@@ -69,7 +72,9 @@
 }
 
 .input:focus, .select:focus, .textarea:focus {
-    border-bottom-color: var(--brand-gold);
+    border-color: var(--brand-gold);
+    background: transparent;
+    box-shadow: 0 0 0 4px rgba(200, 169, 106, 0.15); /* Soft gold glow */
 }
 
 .textarea {
@@ -92,13 +97,16 @@
     text-transform: uppercase;
     font-size: 11px;
     letter-spacing: 0.3em;
+    border-radius: 100px;
     transition: all 0.5s;
-    border: none; /* Added for consistency */
-    cursor: pointer; /* Added for consistency */
+    border: none;
+    cursor: pointer;
 }
 
 .submitBtn:hover {
     background: var(--brand-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(200, 169, 106, 0.2);
 }
 
 .whatsappBtn {
@@ -107,15 +115,16 @@
     justify-content: center;
     gap: 12px;
     padding: 24px 48px;
-    border: 1px solid var(--app-text);
+    border: 1px solid var(--app-border);
     color: var(--app-text);
     font-weight: 700;
     text-transform: uppercase;
     font-size: 11px;
     letter-spacing: 0.3em;
+    border-radius: 100px;
     transition: all 0.5s;
-    background: transparent; /* Added for consistency */
-    cursor: pointer; /* Added for consistency */
+    background: transparent;
+    cursor: pointer;
 }
 
 .whatsappBtn:hover {

@@ -11,7 +11,7 @@ interface RelatedRoomsProps {
 
 export default function RelatedRooms({ rooms }: RelatedRoomsProps) {
   return (
-    <section className="py-32 bg-[var(--app-bg-accent)] overflow-hidden">
+    <section className="py-40 md:py-56 bg-[var(--app-bg-accent)] overflow-hidden">
       <div className="lux-container">
 
         {/* Header */}
@@ -20,70 +20,65 @@ export default function RelatedRooms({ rooms }: RelatedRoomsProps) {
            whileInView={{ opacity: 1, y: 0 }}
            viewport={{ once: true }}
            transition={{ duration: 1 }}
-           className="text-center mb-24"
+           className="text-center mb-32 md:mb-40"
         >
-          <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-[var(--brand-gold)] block mb-4">
+          <span className="text-[12px] md:text-[14px] font-bold uppercase tracking-[0.4em] text-[var(--brand-gold)] block mb-8">
             Curated Selection
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-[var(--app-text)] italic">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[var(--app-text)] italic mb-10 md:mb-16">
             Alternative Retreats
           </h2>
         </motion.div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-16 w-full max-w-7xl mx-auto px-4 md:px-0">
           {rooms.map((room, i) => (
             <motion.div
               key={room.slug}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ 
-                duration: 1.2, 
-                delay: i * 0.2, 
-                ease: [0.22, 1, 0.36, 1] 
-              }}
+              transition={{ duration: 1.2, delay: i * 0.2, ease: [0.22, 1, 0.36, 1] }}
               viewport={{ once: true, margin: "-100px" }}
-              className="group"
+              className="group flex flex-col w-full flex-1 bg-[var(--card-bg)] rounded-[24px] border border-[var(--app-border)] overflow-hidden shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 hover:border-[var(--brand-gold)] transition-all duration-700"
             >
-              <Link href={`/rooms/${room.slug}`} className="block">
+              <Link href={`/rooms/${room.slug}`} className="flex flex-col h-full">
                 {/* Image */}
-                <div className="relative h-[450px] overflow-hidden rounded-[2.5rem] mb-8 shadow-2xl">
+                <div className="relative h-[300px] md:h-[400px] w-full overflow-hidden">
                   <Image
                     src={room.galleryImages[0]}
                     alt={room.title}
                     fill
-                    className="object-cover transition-transform duration-[1.5s] cubic-bezier(0.22, 1, 0.36, 1) group-hover:scale-110"
+                    className="object-cover transition-transform duration-[1.5s] ease-[0.22,1,0.36,1] group-hover:scale-110"
                   />
-                  {/* Gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 transition-opacity duration-700 group-hover:opacity-100" />
+                  {/* Subtle Gradient for hover transition */}
+                  <div className="absolute inset-0 bg-black/0 transition-colors duration-700 group-hover:bg-black/10" />
 
-                  {/* Bottom info */}
-                  <div className="absolute bottom-0 left-0 right-0 p-10">
-                    <div className="flex items-end justify-between">
-                      <div>
-                        <p className="text-white/50 text-[10px] uppercase tracking-[0.4em] font-inter mb-2">Refined Haven</p>
-                        <h3 className="text-white text-3xl font-serif font-medium leading-tight">{room.title}</h3>
-                      </div>
-                      <div className="text-right">
-                        <p className="text-[var(--brand-gold)] text-[10px] uppercase font-bold tracking-[0.2em] font-inter mb-1">From</p>
-                        <p className="text-white text-2xl font-serif font-bold">₹{room.price}</p>
-                        <p className="text-white/30 text-[10px] font-inter">/ night</p>
-                      </div>
-                    </div>
+                  {/* Glass Badge */}
+                  <div className="absolute top-4 right-4 md:top-6 md:right-6">
+                    <span className="inline-block bg-black/40 backdrop-blur-md text-white text-[9px] font-bold uppercase tracking-[0.2em] px-3 py-1.5 md:px-4 md:py-2 rounded-full border border-white/10">
+                      Signature Stay
+                    </span>
                   </div>
 
-                  {/* Explore pill — slides up on hover */}
-                  <div className="absolute top-8 right-8 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-600 ease-[0.22, 1, 0.36, 1]">
-                    <span className="inline-flex items-center gap-2.5 bg-[var(--brand-gold)] text-white text-[10px] font-bold uppercase tracking-[0.2em] px-6 py-3 rounded-full shadow-2xl backdrop-blur-md">
-                      Discover <ArrowRight size={12} />
+                  {/* Explore button — slides up on hover */}
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-[0.22,1,0.36,1]">
+                    <span className="inline-flex items-center justify-center bg-[var(--brand-gold)] text-white w-12 h-12 md:w-16 md:h-16 rounded-full shadow-2xl scale-75 group-hover:scale-100 transition-transform duration-700">
+                      <ArrowRight size={20} />
                     </span>
                   </div>
                 </div>
 
-                {/* Tagline */}
-                <p className="text-sm text-[var(--app-text-muted)] font-inter font-light leading-relaxed text-center px-10 max-w-sm mx-auto">
-                  {room.tagline}
-                </p>
+                {/* Bottom Content Area */}
+                <div className="p-8 md:p-10 flex items-center justify-between bg-[var(--app-bg)] relative z-10 border-t border-[var(--app-border)]">
+                  <h3 className="text-4xl md:text-5xl font-serif text-[var(--app-text)] font-medium leading-none m-0">
+                    {room.title}
+                  </h3>
+                  
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-4xl md:text-5xl font-sans font-bold tracking-tight text-[var(--brand-orange)] leading-none drop-shadow-sm">₹{room.price}</span>
+                    <span className="text-[14px] md:text-[16px] font-medium text-[var(--app-text-muted)] uppercase tracking-widest ml-1">/ night</span>
+                  </div>
+                </div>
               </Link>
             </motion.div>
           ))}

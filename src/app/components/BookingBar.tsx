@@ -2,12 +2,23 @@
 import { useState } from 'react';
 import { Calendar, Users, ChevronDown } from 'lucide-react';
 import styles from './BookingBar.module.css';
+import { usePathname, useRouter } from 'next/navigation';
 
 export default function BookingBar() {
     const [guests, setGuests] = useState('2');
+    const pathname = usePathname();
+    const router = useRouter();
 
     const scrollTo = (id: string) => {
-        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+        if (pathname === '/') {
+            const elm = document.getElementById(id);
+            if (elm) {
+                const y = elm.getBoundingClientRect().top + window.scrollY - 100;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+            }
+        } else {
+            window.location.href = `/#${id}`;
+        }
     };
 
     return (

@@ -47,28 +47,33 @@ const cardVariants = {
 
 export default function AmenitiesGrid({ amenities }: AmenitiesGridProps) {
   return (
-    <section className="relative mt-16">
-      <div className="flex items-center gap-3 mb-10 max-w-4xl">
-        <Sparkles size={18} className="text-[var(--brand-orange)]" />
-        <h3 className="text-2xl font-bold text-[#1a1a1a]">Room Amenities</h3>
+    <section className="relative w-full">
+      <div className="flex flex-col items-center justify-center text-center mt-32 md:mt-40 mb-16 w-full max-w-6xl mx-auto">
+        <span className="text-[11px] md:text-[13px] font-bold uppercase tracking-[0.4em] text-[var(--brand-gold)] mb-6 block">
+          Premium Inclusions
+        </span>
+        <h3 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[var(--app-text)]">Room Amenities</h3>
+        <div className="h-12 w-px bg-gradient-to-b from-transparent via-[var(--brand-gold)] to-transparent mt-8 opacity-50"></div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full max-w-6xl mx-auto px-4 md:px-0">
         {amenities.map((item, index) => {
           const Icon = getIcon(item.name);
           return (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.05 }}
-              className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-center gap-6 hover:shadow-md transition-shadow duration-300"
+              transition={{ delay: index * 0.08, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              className="group bg-[var(--card-bg)] px-6 py-8 rounded-[2rem] border border-[var(--app-border)] flex flex-col items-center text-center gap-5 hover:shadow-2xl hover:-translate-y-2 hover:border-[var(--brand-gold)] transition-all duration-500 relative overflow-hidden"
             >
-              <div className="w-12 h-12 rounded-xl bg-orange-50 flex items-center justify-center shrink-0">
-                <Icon size={24} className="text-[var(--brand-orange)]" strokeWidth={1.5} />
+              <div className="absolute inset-0 bg-gradient-to-br from-transparent to-[var(--app-bg-accent)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <div className="w-16 h-16 rounded-full bg-[var(--app-bg-accent)] flex items-center justify-center shrink-0 group-hover:bg-[var(--brand-gold)] transition-colors duration-500 relative z-10 border border-[var(--app-border)] group-hover:border-transparent">
+                <Icon size={26} className="text-[var(--brand-orange)] group-hover:text-white transition-colors duration-500" strokeWidth={1.5} />
               </div>
-              <span className="text-lg font-medium text-[var(--app-text)]">{item.name}</span>
+              <span className="text-[13px] md:text-[15px] font-semibold tracking-wide text-[var(--app-text)] relative z-10">{item.name}</span>
             </motion.div>
           );
         })}

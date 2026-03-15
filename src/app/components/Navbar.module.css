@@ -239,3 +239,12 @@
 :global([data-theme='dark']) .mobileToggle {
     color: #FFFFFF !important;
 }
+
+:global([data-theme='dark']) .themeToggle {
+    color: #FFFFFF !important;
+}
+
+:global([data-theme='dark']) .themeToggle:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: var(--brand-gold) !important;
+}

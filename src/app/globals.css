@@ -63,31 +63,31 @@
 }
 
 :root[data-theme='dark'] {
-  --app-bg: #0D0D0D;
-  --app-bg-accent: #111111;
+  --app-bg: #1C1C1E;
+  --app-bg-accent: #232326;
   --app-text: #FFFFFF;
-  --app-text-muted: #A0A0A0;
+  --app-text-muted: #A1A1A6;
   --app-border: rgba(255, 255, 255, 0.1);
-  --section-bg: #0D0D0D;
-  --section-bg-alt: #111111;
-  --border-card: rgba(255, 255, 255, 0.08);
-  --card-bg-alt: #1A1A1A;
-  --nav-bg: rgba(13, 13, 13, 0.95);
-  --card-bg: #151515;
-  --card-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  --section-bg: #1C1C1E;
+  --section-bg-alt: #232326;
+  --border-card: rgba(255, 255, 255, 0.12);
+  --card-bg-alt: #2D2D30;
+  --nav-bg: rgba(28, 28, 30, 0.95);
+  --card-bg: #28282C;
+  --card-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
   --logo-filter: brightness(0) invert(1); /* Forces white at the top */
   --logo-filter-scrolled: brightness(0) invert(1); /* Stays white when scrolled in dark mode */
   --logo-filter-footer: brightness(0) invert(1); /* Stays white in dark footer */
   
-  --glass-bg: rgba(17, 17, 17, 0.6);
-  --glass-border: rgba(255, 255, 255, 0.05);
+  --glass-bg: rgba(28, 28, 30, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.08);
 
   /* Contrast Overrides for common tailwind/hardcoded colors */
   --tw-text-gray-800: #E5E7EB;
   --tw-text-black: #FFFFFF;
-  --tw-bg-white: #151515;
-  --tw-bg-gray-100: #1A1A1A;
-  --tw-border-gray-100: rgba(255, 255, 255, 0.1);
+  --tw-bg-white: #28282C;
+  --tw-bg-gray-100: #2D2D30;
+  --tw-border-gray-100: rgba(255, 255, 255, 0.12);
 }
 
 /* Luxury Texture Overlay */

@@ -122,3 +122,19 @@
         padding: 12px 25px;
     }
 }
+
+/* Dark Mode Overrides */
+:global([data-theme='dark']) .card {
+    background: #111111;
+    border-color: rgba(232, 93, 26, 0.2);
+}
+
+:global([data-theme='dark']) .card:hover {
+    background: #1A1A1A;
+    border-color: #E85D1A;
+    box-shadow: 0 10px 30px rgba(232, 93, 26, 0.2);
+}
+
+:global([data-theme='dark']) .label {
+    color: #FFFFFF;
+}

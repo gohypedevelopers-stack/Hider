@@ -16,7 +16,15 @@ export default function Hero() {
     }, [images.length]);
 
     const scrollTo = (id: string) => {
-        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+        if (window.location.pathname === '/') {
+            const elm = document.getElementById(id);
+            if (elm) {
+                const y = elm.getBoundingClientRect().top + window.scrollY - 100;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+            }
+        } else {
+            window.location.href = `/#${id}`;
+        }
     };
 
     return (

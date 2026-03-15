@@ -59,7 +59,7 @@ export default async function RoomPage({ params }: PageProps) {
       <RoomMainContent>
         
         {/* Main Narrative Column */}
-        <div className="flex flex-col gap-20">
+        <div className="flex flex-col gap-28 md:gap-36">
           
           {/* Room Experience */}
           <RoomExperience 

@@ -5,7 +5,11 @@ import styles from './WelcomeHeader.module.css';
 
 export default function WelcomeHeader() {
     const scrollTo = (id: string) => {
-        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+        const elm = document.getElementById(id);
+        if (elm) {
+            const y = elm.getBoundingClientRect().top + window.scrollY - 100;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+        }
     };
 
     const openWhatsApp = () => {
