@@ -125,9 +125,9 @@
 
 @media (max-width: 600px) {
     .grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
     }
     .section {
         padding: 80px 0;

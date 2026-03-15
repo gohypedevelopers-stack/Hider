@@ -8,6 +8,17 @@ export default function AboutUs() {
         <section id="about" className={styles.section}>
             <div className={`lux-container ${styles.inner}`}>
                 <motion.div
+                    className={styles.mobileTitle}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+                >
+                    <h2>About Us</h2>
+                    <div className={styles.divider} />
+                </motion.div>
+
+                <motion.div
                     className={styles.imageWrapper}
                     initial={{ opacity: 0, x: -60, scale: 1.05 }}
                     whileInView={{ opacity: 1, x: 0, scale: 1 }}
@@ -33,8 +44,10 @@ export default function AboutUs() {
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 1.2, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
                 >
-                    <h2>About Us</h2>
-                    <div className={styles.divider} />
+                    <div className={styles.desktopTitle}>
+                        <h2>About Us</h2>
+                        <div className={styles.divider} />
+                    </div>
                     <p>
                         Experience a relaxing and comfortable stay at Hotel Hider, conveniently located near NH-48 and IMT Manesar. 
                         Our property offers spacious rooms, modern amenities, and warm hospitality for business travelers, families, 

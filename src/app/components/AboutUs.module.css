@@ -112,7 +112,15 @@
     position: relative;
 }
 
-.content h2 {
+.mobileTitle {
+    display: none;
+}
+
+.desktopTitle {
+    display: block;
+}
+
+.content h2, .mobileTitle h2 {
     font-family: var(--font-heading);
     font-size: clamp(40px, 4.5vw, 56px);
     color: var(--app-text);
@@ -157,7 +165,7 @@
 .stats {
     display: block;
     font-family: var(--font-heading);
-    font-size: clamp(32px, 8vw, 48px);
+    font-size: clamp(18px, 4vw, 24px);
     color: var(--brand-gold);
     line-height: 1;
     font-weight: 500;
@@ -185,16 +193,26 @@
 @media (max-width: 1100px) {
     .inner {
         grid-template-columns: 1fr;
-        gap: 80px;
+        gap: 60px;
     }
     
+    .mobileTitle {
+        display: block;
+        order: 1;
+        margin-bottom: -20px;
+    }
+
+    .desktopTitle {
+        display: none;
+    }
+
     .imageWrapper {
         height: 500px;
         order: 2;
     }
     
     .content {
-        order: 1;
+        order: 3;
         padding-left: 0;
     }
 
@@ -210,8 +228,8 @@
 
 @media (max-width: 600px) {
     .highlights {
-        grid-template-columns: 1fr;
-        gap: 32px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
     }
 }
 

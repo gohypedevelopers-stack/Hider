@@ -35,7 +35,7 @@
 }
 
 .logoImg {
-    height: 100px;
+    height: 70px;
     width: auto;
     padding-top: 8px;
     filter: var(--logo-filter);
