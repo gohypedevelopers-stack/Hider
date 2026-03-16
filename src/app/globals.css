@@ -135,23 +135,7 @@ html {
   color: #FFFFFF;
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--app-bg);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--app-border);
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--brand-gold);
-}
+/* Native scrollbars will be used instead of custom webkit ones to prevent layout shifting and solid tracks on dark blocks */
 
 body {
   font-family: var(--font-body);

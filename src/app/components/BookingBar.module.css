@@ -34,7 +34,7 @@
     flex: 1;
     display: flex;
     align-items: center;
-    padding: 32px 48px;
+    padding: 24px 32px;
     cursor: pointer;
     transition: all 0.4s ease;
     position: relative;
@@ -57,19 +57,19 @@
 }
 
 .label {
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.25em;
     color: var(--brand-forest);
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     opacity: 0.5;
 }
 
 .input, .select {
     border: none;
     background: transparent;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     color: var(--brand-charcoal);
     outline: none;
@@ -95,10 +95,10 @@
     background: var(--brand-gold);
     color: #FFFFFF;
     border: none;
-    padding: 0 72px;
+    padding: 0 48px;
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 11px;
     letter-spacing: 0.25em;
     cursor: pointer;
     transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);

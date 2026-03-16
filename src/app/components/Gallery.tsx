@@ -22,9 +22,7 @@ export default function Gallery() {
                     <h2>Gallery</h2>
                     <p>A glimpse into the refined aesthetics and serene atmosphere of Hotel Hider.</p>
                 </motion.div>
-            </div>
 
-            <div className="w-full max-w-[1800px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16">
                 <div className={styles.grid}>
                     {siteConfig.images.gallery.map((src, index) => (
                         <motion.div
@@ -40,7 +38,6 @@ export default function Gallery() {
                         </motion.div>
                     ))}
                 </div>
-            </div>
 
             <AnimatePresence>
                     {selectedImage && (
@@ -61,6 +58,7 @@ export default function Gallery() {
                         </motion.div>
                     )}
                 </AnimatePresence>
+            </div>
         </section>
     );
 }
