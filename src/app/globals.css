@@ -122,7 +122,7 @@
 
 * {
   box-sizing: border-box;
-  margin: 1px;
+  margin: 0;
   padding: 0;
 }
 
@@ -425,4 +425,15 @@ img.logo,
   .intro {
     margin-bottom: 60px;
   }
+}
+
+/* Hide Vercel Preview Toolbar and Next.js Build Watcher (auto-moving corner line) */
+vercel-live-feedback,
+#vercel-live-feedback,
+.vercel-toolbar,
+#vercel-toolbar,
+__next-build-watcher,
+#next-build-watcher,
+nextjs-portal {
+  display: none !important;
 }

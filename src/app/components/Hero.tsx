@@ -95,12 +95,6 @@ export default function Hero() {
                 </div>
             </div>
 
-
-            <div className={styles.scrollIndicator} onClick={() => scrollTo('about')}>
-                <div className={styles.mouse}>
-                    <div className={styles.wheel}></div>
-                </div>
-            </div>
         </section>
     );
 }

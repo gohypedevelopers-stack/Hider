@@ -57,7 +57,7 @@ export default function RoomHero({ title, images, price = "4,500", tagline = "A 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--app-text)] m-0 leading-[1.1] font-sans tracking-tight"
+              className="text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--app-text)] m-0 leading-[1.1] font-sans tracking-tight"
             >
               {title}
             </motion.h1>

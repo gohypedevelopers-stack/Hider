@@ -26,7 +26,7 @@ export default function RoomExperience({ title, description, features, price }: 
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="max-w-5xl mx-auto flex flex-col items-center justify-center pt-8 md:pt-16 mb-20 md:mb-32 relative"
+        className="max-w-7xl mx-auto flex flex-col items-center justify-center pt-8 md:pt-16 mb-20 md:mb-32 relative"
       >
         <motion.div variants={itemVariants} className="mb-4">
           <span className="text-[11px] md:text-[13px] font-bold uppercase tracking-[0.4em] text-[var(--brand-gold)] block text-center">
@@ -44,12 +44,12 @@ export default function RoomExperience({ title, description, features, price }: 
         <motion.div variants={itemVariants} className="h-24 w-px bg-gradient-to-b from-transparent via-[var(--brand-gold)] to-transparent mb-12 opacity-50" />
 
         {/* The Text */}
-        <motion.div variants={itemVariants} className="relative w-full text-center px-6 md:px-16">
-          <div className="absolute -top-16 -left-2 md:-left-8 text-[140px] text-[var(--brand-gold)] opacity-[0.15] font-serif leading-none select-none">"</div>
-          <p className="text-xl md:text-3xl text-[var(--app-text-muted)] leading-[1.8] font-light font-serif italic relative z-10 transition-colors duration-300 group-hover:text-[var(--app-text)]">
+        <motion.div variants={itemVariants} className="relative w-full max-w-5xl mx-auto text-center px-10 md:px-20">
+          <div className="absolute top-1/2 left-0 md:-left-8 text-[120px] md:text-[180px] text-[var(--brand-gold)] opacity-[0.15] font-serif leading-none select-none transform -translate-y-1/2">"</div>
+          <p className="text-2xl md:text-3xl lg:text-4xl text-[var(--app-text-muted)] leading-[1.6] md:leading-[1.8] font-light font-serif italic relative z-10 transition-colors duration-300 group-hover:text-[var(--app-text)]">
             {description}
           </p>
-          <div className="absolute -bottom-24 -right-2 md:-right-8 text-[140px] text-[var(--brand-gold)] opacity-[0.15] font-serif leading-none select-none">"</div>
+          <div className="absolute top-1/2 right-0 md:-right-8 text-[120px] md:text-[180px] text-[var(--brand-gold)] opacity-[0.15] font-serif leading-none select-none transform -translate-y-1/2">"</div>
         </motion.div>
       </motion.div>
     </section>
