@@ -11,18 +11,18 @@ interface RelatedRoomsProps {
 
 export default function RelatedRooms({ rooms }: RelatedRoomsProps) {
   return (
-    <section className="pt-32 pb-40 md:pt-48 md:pb-56 mt-40 md:mt-64 bg-[var(--app-bg-accent)] overflow-hidden">
+    <section className="pt-40 pb-40 md:pt-56 md:pb-56 mt-40 md:mt-64 bg-[var(--app-bg-accent)] overflow-hidden">
       <div className="lux-container">
 
         {/* Header */}
         <motion.div
-           initial={{ opacity: 0, y: 30 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           viewport={{ once: true }}
-           transition={{ duration: 1 }}
-           className="text-center mb-32 md:mb-40"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          className="text-center mb-32 md:mb-45"
         >
-          <span className="text-[12px] md:text-[14px] font-bold uppercase tracking-[0.4em] text-[var(--brand-gold)] block mb-8">
+          <span className="text-[12px] md:text-[14px] font-bold uppercase tracking-[0.4em] text-[var(--brand-gold)] block pt-10 mb-8">
             Curated Selection
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-sans font-extrabold text-[var(--app-text)] uppercase tracking-wider mb-10 md:mb-16">
@@ -73,7 +73,7 @@ export default function RelatedRooms({ rooms }: RelatedRoomsProps) {
                   <h3 className="text-4xl md:text-5xl font-serif text-[var(--app-text)] font-medium leading-none m-0">
                     {room.title}
                   </h3>
-                  
+
                   <div className="flex items-baseline gap-2">
                     <span className="text-4xl md:text-5xl font-sans font-bold tracking-tight text-[var(--brand-orange)] leading-none drop-shadow-sm">₹{room.price}</span>
                     <span className="text-[14px] md:text-[16px] font-medium text-[var(--app-text-muted)] uppercase tracking-widest ml-1">/ night</span>

@@ -19,11 +19,11 @@ export default function RoomGallery({ images }: RoomGalleryProps) {
         <span className="text-[11px] md:text-[13px] font-bold uppercase tracking-[0.4em] text-[var(--brand-gold)] mb-6 block">
           Visual Tour
         </span>
-        <h3 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[var(--app-text)]">Gallery</h3>
+        <h3 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[var(--app-text)] mb-5">Gallery</h3>
         <div className="h-12 w-px bg-gradient-to-b from-transparent via-[var(--brand-gold)] to-transparent mt-8 opacity-50"></div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-7xl mx-auto px-4 md:px-0">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-[90rem] mx-auto px-4 md:px-0">
         {displayImages.map((img, i) => (
           <motion.div
             key={i}
@@ -33,7 +33,7 @@ export default function RoomGallery({ images }: RoomGalleryProps) {
             transition={{ delay: i * 0.1, duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="flex flex-col group"
           >
-            <div className="relative aspect-[3/4] md:aspect-square overflow-hidden rounded-[2rem] shadow-lg border border-[var(--app-border)]">
+            <div className="relative aspect-[3/4] md:aspect-[4/5] lg:h-[500px] xl:h-[600px] overflow-hidden rounded-[2rem] shadow-lg border border-[var(--app-border)]">
               <Image
                 src={img}
                 alt={captions[i] || 'Room gallery image'}
