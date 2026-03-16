@@ -2,16 +2,21 @@
 
 :root {
   /* ULTRA-LUXURY BRAND TOKENS */
-  --brand-gold: #C8A96A; /* Metallic Gold */
+  --brand-gold: #C8A96A;
+  /* Metallic Gold */
   --brand-gold-rgb: 200, 169, 106;
   --brand-gold-soft: #D4BD8A;
   --brand-gold-hover: #AB8E55;
   --brand-charcoal: #111111;
-  --brand-beige: #F5F3EF; /* Soft Resort Beige */
+  --brand-beige: #F5F3EF;
+  /* Soft Resort Beige */
   --brand-cream: #FAF9F6;
-  --brand-sage: #E7ECE8; /* New Luxury Sage Green */
-  --brand-forest: #2D3E3A; /* New Deep Forest Green */
-  --brand-orange: #ED6B24; /* Screenshot Brand Color */
+  --brand-sage: #E7ECE8;
+  /* New Luxury Sage Green */
+  --brand-forest: #2D3E3A;
+  /* New Deep Forest Green */
+  --brand-orange: #ED6B24;
+  /* Screenshot Brand Color */
 
   /* THEME TOKENS (Light/Luxury Minimal) */
   --app-bg: #FFFFFF;
@@ -23,9 +28,12 @@
   --nav-text: #111111;
   --card-bg: #FFFFFF;
   --card-shadow: 0 20px 60px rgba(0, 0, 0, 0.05);
-  --logo-filter: brightness(0) invert(1); /* Forces it to be white at the top */
-  --logo-filter-scrolled: brightness(0); /* Forces it to be dark when scrolled */
-  --logo-filter-footer: brightness(0); /* Forces dark logo in light footer */
+  --logo-filter: brightness(0) invert(1);
+  /* Forces it to be white at the top */
+  --logo-filter-scrolled: brightness(0);
+  /* Forces it to be dark when scrolled */
+  --logo-filter-footer: brightness(0);
+  /* Forces dark logo in light footer */
 
   /* GLASS TOKENS */
   --glass-bg: rgba(255, 255, 255, 0.75);
@@ -75,10 +83,13 @@
   --nav-bg: rgba(28, 28, 30, 0.95);
   --card-bg: #28282C;
   --card-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
-  --logo-filter: brightness(0) invert(1); /* Forces white at the top */
-  --logo-filter-scrolled: brightness(0) invert(1); /* Stays white when scrolled in dark mode */
-  --logo-filter-footer: brightness(0) invert(1); /* Stays white in dark footer */
-  
+  --logo-filter: brightness(0) invert(1);
+  /* Forces white at the top */
+  --logo-filter-scrolled: brightness(0) invert(1);
+  /* Stays white when scrolled in dark mode */
+  --logo-filter-footer: brightness(0) invert(1);
+  /* Stays white in dark footer */
+
   --glass-bg: rgba(28, 28, 30, 0.6);
   --glass-border: rgba(255, 255, 255, 0.08);
 
@@ -176,7 +187,8 @@ h3 {
   font-weight: 500;
 }
 
-h4, h5 {
+h4,
+h5 {
   font-family: var(--font-heading);
   font-weight: 500;
 }
@@ -227,7 +239,8 @@ ul {
   margin: 0 auto 40px;
 }
 
-html, body {
+html,
+body {
   overflow-x: clip !important;
   width: 100%;
   position: relative;
@@ -244,6 +257,7 @@ html, body {
   padding-left: var(--app-container-px);
   padding-right: var(--app-container-px);
   position: relative;
+  margin-bottom: 60px !important;
 }
 
 /* Common Section Wrapper */
@@ -351,6 +365,7 @@ img.logo,
 [data-theme='dark'] .bg-\[\#FFF5F0\] {
   background-color: #1E1209 !important;
 }
+
 [data-theme='dark'] .border-\[\#FFE4D6\] {
   border-color: #3D1F0D !important;
 }
@@ -377,7 +392,9 @@ img.logo,
 }
 
 /* Smooth global transitions */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   transition-property: background-color, color, border-color;
   transition-duration: 0.3s;
   transition-timing-function: ease;
@@ -388,7 +405,7 @@ img.logo,
   :root {
     --section-padding: var(--section-padding-mobile);
   }
-  
+
   .hider-main-container {
     padding: 0 var(--app-container-px) !important;
   }
